@@ -1,0 +1,10 @@
+@import "theme";
+
+.myClass {
+  font-family: sans-serif;
+
+  @include themed() {
+    color: t("text");
+    background: t("bg");
+  }
+}
