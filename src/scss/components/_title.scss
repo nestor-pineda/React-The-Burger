@@ -1,0 +1,19 @@
+@import "../styles.scss";
+
+.title {
+  @include grid3(1px solid, 1px solid);
+  .title__left {
+    @include leftSide;
+  }
+  .title__right {
+    @include rightSide;
+  }
+  .title__center {
+    @include boxClip($titleBg);
+    @include boxPadding;
+    h2 {
+      @include title($myH2, $myBold, 0, 20px);
+      text-align: center;
+    }
+  }
+}

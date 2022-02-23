@@ -1,0 +1,57 @@
+// All Text Mixine
+@mixin title($size, $weight, $margin, $padding) {
+  font-family: "Noto Serif", serif; // Noto Serif
+  color: $titleColor; // Black
+  font-size: $size;
+  font-weight: $weight;
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin grid3($border-top, $border-bottom) {
+  // Fot the footer
+  display: grid;
+  grid-template-columns: 0.5em 1fr 0.5em;
+  grid-template-rows: auto;
+  border-color: $borderColor;
+  border-top: $border-top;
+  border-bottom: $border-bottom;
+  @media (min-width: 600px) {
+    grid-template-columns: 1em 1fr 1em;
+  }
+}
+// for the left qhite side
+@mixin leftSide {
+  border-right: 1px solid $borderColor;
+}
+
+// for the right qhite side
+@mixin rightSide {
+  border-left: 1px solid $borderColor;
+}
+
+@mixin gridInner {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  @media (min-width: 600px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// For Cliping BG color
+@mixin boxClip($bgColor) {
+  background-color: $bgColor;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-clip: content-box;
+}
+
+@mixin boxPadding {
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  @media (min-width: 600px) {
+    padding: 1em 1em 1em 1em;
+  }
+}

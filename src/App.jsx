@@ -1,13 +1,11 @@
-import ThemeSetter from "./components/ThemeSetter";
 import ThemeProvider from "./Context/ThemeContext/ThemeProvider";
-import Header from "./components/Header";
+import Layout from "./components/Layout";
 
 function App() {
   return (
     <ThemeProvider>
-      <ThemeSetter />
-      <div className="myClass">
-        <Header />
+      <div className="theme">
+        <Layout></Layout>
       </div>
     </ThemeProvider>
   );

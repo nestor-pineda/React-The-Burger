@@ -1,0 +1,27 @@
+////////////////////////
+// Font Size definition
+///////////////////////
+$myFontSize1: clamp(30px, 3vw, 70px); // h1
+$myFontSize2: clamp(26px, 3vw, 60px); // h2
+$myFontSize3: clamp(24px, 3vw, 50px); // h3
+$myFontSize4: clamp(22px, 3vw, 40px); // h4
+$myFontSize5: clamp(20px, 3vw, 30px); // h5
+$myFontSize6: clamp(18px, 3vw, 20px); // h6
+$myFontSize7: clamp(14px, 3vw, 17px); // p
+
+$myH1: $myFontSize1;
+$myH2: $myFontSize2;
+$myH3: $myFontSize3;
+$myH4: $myFontSize4;
+$myH5: $myFontSize5;
+$myH6: $myFontSize6;
+$myH7: $myFontSize7;
+
+////////////////////////
+// Font Weight definition
+///////////////////////
+$myFontWeight1: 400;
+$myFontWeight2: 700;
+
+$myMedium: $myFontWeight1;
+$myBold: $myFontWeight2;

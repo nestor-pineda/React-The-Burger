@@ -1,8 +1,6 @@
 @import "theme";
 
-.myClass {
-  font-family: sans-serif;
-
+.theme {
   @include themed() {
     color: t("text");
     background: t("bg");

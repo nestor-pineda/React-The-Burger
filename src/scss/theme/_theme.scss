@@ -1,16 +1,27 @@
-$text--light: black;
-$text--dark: white;
-$bg--light: white;
-$bg--dark: black;
+@import "../abstracts/variables";
+
+// $text--light: black;
+// $text--dark: white;
+// $bg--light: white;
+// $bg--dark: black;
+
+$textColorLight: $myColor1;
+$textColorDark: $myColor2;
+$bgColorLight: $myColor2;
+$bgColorDark: $myColor10;
+$bgColorFooterLight: $myColor6;
+$bgColorFooterDark: $myColor7;
 
 $themes: (
   light: (
-    bg: $bg--light,
-    text: $text--light,
+    bg: $bgColorLight,
+    text: $textColorLight,
+    footerBg: $bgColorFooterLight,
   ),
   dark: (
-    bg: $bg--dark,
-    text: $text--dark,
+    bg: $bgColorDark,
+    text: $textColorDark,
+    footerBg: $bgColorFooterDark,
   ),
 );
 
