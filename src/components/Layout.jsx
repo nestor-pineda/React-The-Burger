@@ -4,11 +4,13 @@ import Title from "./Title";
 import ImageGallery from "./ImageGallery";
 import Introduction from "./Introduction";
 import Reservation from "./Reservation";
+import HeroHome from "./HeroHome";
 
 const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
+      <HeroHome />
       <Reservation />
       <Introduction />
       <Title />

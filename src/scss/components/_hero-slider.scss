@@ -1,0 +1,13 @@
+@import "../styles.scss";
+
+.hero-slider {
+  @include grid3(none, none);
+  .hero-slider__left {
+    @include leftSide(100%);
+  }
+  .hero-slider__right {
+    @include rightSide(100%);
+  }
+  .hero-slider__center {
+  }
+}

@@ -26,7 +26,7 @@
   }
 }
 
-// Basic Grind for almost every component
+// Basic Grind for every layout main component
 @mixin grid3($border-top, $border-bottom) {
   display: grid;
   grid-template-columns: 0.5em 1fr 0.5em;
