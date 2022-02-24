@@ -1,0 +1,37 @@
+@import "../styles.scss";
+
+.gallery {
+  @include grid3(none, none);
+  .gallery__left {
+    @include leftSide(100%);
+  }
+  .gallery__right {
+    @include rightSide(100%);
+  }
+  .gallery__center {
+    @include gridInner;
+    .gallery__col {
+      @include boxClip($bodyBg);
+      .galleri-img {
+        width: 100%;
+        object-fit: cover;
+        object-position: bottom;
+      }
+      .galleri-img--first {
+        margin-bottom: 0.4em;
+        @media (min-width: 600px) {
+          margin-bottom: 0.9em;
+        }
+      }
+    }
+    .gallery__col:nth-child(1n) {
+      @include borderLeft;
+    }
+    .gallery__col:nth-child(2n) {
+      @include borderLeft;
+    }
+    .gallery__col:nth-child(3n) {
+      @include borderRight;
+    }
+  }
+}

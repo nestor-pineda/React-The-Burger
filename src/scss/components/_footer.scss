@@ -1,50 +1,54 @@
 @import "../styles.scss";
 
-//Footer Colors//
-
-////////////////
-
 footer {
   .footer {
     @include grid3(1px solid, 1px solid);
     .footer__left {
-      border-right: 1px solid $borderColor;
-      height: 100%;
+      @include leftSide(100%);
+      // border-right: 1px solid $borderColor;
+      // height: 100%;
     }
     .footer__right {
-      border-left: 1px solid $borderColor;
-      // background-color: #fff;
-      height: 100%;
+      @include rightSide(100%);
+      // border-left: 1px solid $borderColor;
+      // height: 100%;
     }
     .footer__center {
       @include gridInner;
       .footer__info {
         @include boxClip($footerBg);
+        .logo {
+          width: 100%;
+          max-width: 140px;
+          padding: 20px 0px 10px 20px;
+        }
         h3 {
-          @include title($myH3, $myBold, 10px, 10px);
-          // font-size: 30px;
+          @include title($myH3, $myBold, 0, 10px 0px 10px 20px);
         }
       }
       .footer__info:nth-child(1n) {
-        padding: 0.5em 0.5em 0 0.5em;
+        @include border1;
+        // padding: 0.5em 0.5em 0 0.5em;
       }
       .footer__info:nth-child(2n) {
-        padding: 0 0.5em 0 0.5em;
+        @include border2;
+        // padding: 0 0.5em 0 0.5em;
       }
       .footer__info:nth-child(3n) {
-        padding: 0 0.5em 0.5em 0.5em;
+        @include border3;
+        // padding: 0 0.5em 0.5em 0.5em;
       }
     }
   }
   .post-footer {
     @include grid3(none, none);
     .post-footer__left {
-      @include leftSide;
-      height: 10px;
+      @include leftSide(10px);
+      // height: 10px;
     }
     .post-footer__right {
-      @include rightSide;
-      height: 10px;
+      @include rightSide(10px);
+      // height: 10px;
     }
   }
 }
@@ -52,20 +56,16 @@ footer {
 @media (min-width: 600px) {
   footer {
     .footer {
-      // grid-template-columns: 1em 1fr 1em;
       .footer__center {
-        // grid-template-columns: 1fr 1fr 1fr;
-        .footer__info:nth-child(1n) {
-          border-right: 1px solid $borderColor;
-          padding: 1em 0 1em 1em;
-        }
-        .footer__info:nth-child(2n) {
-          border-right: 1px solid $borderColor;
-          padding: 1em 0 1em 0em;
-        }
-        .footer__info:nth-child(3n) {
-          border-right: none;
-          padding: 1em 1em 1em 0em;
+        .footer__info {
+          .logo {
+            width: 100%;
+            max-width: 140px;
+            padding: 20px 0px 10px 20px;
+          }
+          h3 {
+            @include title($myH3, $myBold, 0, 20px 0px 10px 20px);
+          }
         }
       }
     }

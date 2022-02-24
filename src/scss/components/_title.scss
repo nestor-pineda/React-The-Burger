@@ -3,10 +3,10 @@
 .title {
   @include grid3(1px solid, 1px solid);
   .title__left {
-    @include leftSide;
+    @include leftSide(auto);
   }
   .title__right {
-    @include rightSide;
+    @include rightSide(auto);
   }
   .title__center {
     @include boxClip($titleBg);
