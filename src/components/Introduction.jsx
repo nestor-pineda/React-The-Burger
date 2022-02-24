@@ -7,7 +7,7 @@ const Introduction = () => {
       <div className="introduction__center">
         <div className="introduction__col">
           <h3 className="intro-title">The Restaurant</h3>
-          <img className="intro-img" src="images/gallery/gallery-1.jpg" alt="introduction" />
+          <img className="intro-img" src="images/restaurant.jpg" alt="introduction" />
         </div>
         <div className="introduction__col">
           <h3 className="intro-title">The Story</h3>

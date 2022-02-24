@@ -18,6 +18,7 @@
       }
       .intro-img {
         @include imagesCover(100%, none, 0 0 0.3em 0, none, 0 0 0 20px);
+        max-height: 400px;
       }
       .intro-paragraph {
         @include paragraph($myP, $myMedium, 0, none, 0, 0 0 0 20px);
@@ -46,6 +47,7 @@
         }
         .intro-img {
           @include imagesCover(calc(100% - $myH3), none, 0 0 0 10px, none, 0 0 0 20px);
+          max-height: 600px;
         }
       }
       .introduction__col:nth-child(1n) {

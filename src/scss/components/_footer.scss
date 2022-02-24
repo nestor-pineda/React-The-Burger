@@ -15,7 +15,7 @@ footer {
     }
     .footer__center {
       @include gridInner3;
-      .footer__info {
+      .footer__col {
         @include boxClip($footerBg);
         .logo {
           width: 100%;
@@ -26,15 +26,15 @@ footer {
           @include title($myH3, $myBold, 0, 10px 0px 10px 20px, 0, 20px 0px 10px 20px);
         }
       }
-      .footer__info:nth-child(1n) {
+      .footer__col:nth-child(1n) {
         @include border1;
         // padding: 0.5em 0.5em 0 0.5em;
       }
-      .footer__info:nth-child(2n) {
+      .footer__col:nth-child(2n) {
         @include border2;
         // padding: 0 0.5em 0 0.5em;
       }
-      .footer__info:nth-child(3n) {
+      .footer__col:nth-child(3n) {
         @include border3;
         // padding: 0 0.5em 0.5em 0.5em;
       }
@@ -57,7 +57,7 @@ footer {
   footer {
     .footer {
       .footer__center {
-        .footer__info {
+        .footer__col {
           .logo {
             width: 100%;
             max-width: 140px;

@@ -26,6 +26,7 @@
   }
 }
 
+// Basic Grind for almost every component
 @mixin grid3($border-top, $border-bottom) {
   display: grid;
   grid-template-columns: 0.5em 1fr 0.5em;
@@ -134,7 +135,7 @@
 @mixin imagesCover($width, $margin, $padding, $margin600, $padding600) {
   width: $width;
   object-fit: cover;
-  object-position: bottom;
+  object-position: center;
   margin: $margin;
   padding: $padding;
   box-sizing: border-box;

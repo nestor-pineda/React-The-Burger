@@ -6,13 +6,13 @@ const Footer = () => {
       <div className="footer">
         <div className="footer__left"></div>
         <div className="footer__center">
-          <div className="footer__info">
+          <div className="footer__col">
             <img className="logo" src="images/the-burger-logo.png" alt="burger logo" />
           </div>
-          <div className="footer__info">
+          <div className="footer__col">
             <h3>Hear it First</h3>
           </div>
-          <div className="footer__info">
+          <div className="footer__col">
             <nav>
               <li>Home</li>
               <li>Home</li>

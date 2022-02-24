@@ -1,0 +1,29 @@
+@import "../styles.scss";
+
+.reservation {
+  @include grid3(1px solid, 1px solid);
+  .reservation__left {
+    @include leftSide(100%);
+  }
+  .reservation__right {
+    @include rightSide(100%);
+  }
+  .reservation__center {
+    @include gridInner2;
+    .reservation__col {
+      @include boxClip($reservationBg);
+      .reserv-title {
+        @include title($myH3, $myBold, 0, 10px 0px 0 10px, 0, 20px 0px 10px 20px);
+      }
+      .reserv-paragraph {
+        @include paragraph($myP, $myMedium, 10px 0 0 0, 0 0 10px 10px, 10px 0 0 0, 0 0 20px 20px);
+      }
+    }
+    .reservation__col:nth-child(1n) {
+      @include border1;
+    }
+    .reservation__col:nth-child(2n) {
+      @include border3;
+    }
+  }
+}
