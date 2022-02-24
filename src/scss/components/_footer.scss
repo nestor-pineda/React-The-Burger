@@ -14,7 +14,7 @@ footer {
       // height: 100%;
     }
     .footer__center {
-      @include gridInner;
+      @include gridInner3;
       .footer__info {
         @include boxClip($footerBg);
         .logo {
@@ -23,7 +23,7 @@ footer {
           padding: 20px 0px 10px 20px;
         }
         h3 {
-          @include title($myH3, $myBold, 0, 10px 0px 10px 20px);
+          @include title($myH3, $myBold, 0, 10px 0px 10px 20px, 0, 20px 0px 10px 20px);
         }
       }
       .footer__info:nth-child(1n) {
@@ -64,7 +64,7 @@ footer {
             padding: 20px 0px 10px 20px;
           }
           h3 {
-            @include title($myH3, $myBold, 0, 20px 0px 10px 20px);
+            // @include title($myH3, $myBold, 0, 20px 0px 10px 20px);
           }
         }
       }

@@ -1,11 +1,29 @@
-// All Text Mixine
-@mixin title($size, $weight, $margin, $padding) {
-  font-family: "Noto Serif", serif; // Noto Serif
+// All Titles Mixine
+@mixin title($size, $weight, $margin, $padding, $margin600, $padding600) {
+  font-family: $titleFont; // Noto Serif
   color: $titleColor; // Black
   font-size: $size;
   font-weight: $weight;
   margin: $margin;
   padding: $padding;
+  @media (min-width: 600px) {
+    margin: $margin600;
+    padding: $padding600;
+  }
+}
+
+// All Titles Mixine
+@mixin paragraph($size, $weight, $margin, $padding, $margin600, $padding600) {
+  font-family: $paragraphFont; // Noto Serif
+  color: $titleColor; // Black
+  font-size: $size;
+  font-weight: $weight;
+  margin: $margin;
+  padding: $padding;
+  @media (min-width: 600px) {
+    margin: $margin600;
+    padding: $padding600;
+  }
 }
 
 @mixin grid3($border-top, $border-bottom) {
@@ -32,13 +50,24 @@
 }
 
 // For Inner 3 cols grid
-@mixin gridInner {
+@mixin gridInner3 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   width: 100%;
   @media (min-width: 600px) {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// For Inner 2 cols grid
+@mixin gridInner2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  @media (min-width: 600px) {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -98,5 +127,19 @@
   @media (min-width: 600px) {
     border-right: none;
     padding: 1em;
+  }
+}
+
+// for images like in gallery or in into
+@mixin imagesCover($width, $margin, $padding, $margin600, $padding600) {
+  width: $width;
+  object-fit: cover;
+  object-position: bottom;
+  margin: $margin;
+  padding: $padding;
+  box-sizing: border-box;
+  @media (min-width: 600px) {
+    margin: $margin600;
+    padding: $padding600;
   }
 }

@@ -1,0 +1,74 @@
+@import "../styles.scss";
+
+.introduction {
+  @include grid3(none, none);
+  .introduction__left {
+    @include leftSide(100%);
+  }
+  .introduction__right {
+    @include rightSide(100%);
+  }
+  .introduction__center {
+    @include gridInner2;
+    .introduction__col {
+      @include boxClip($bodyBg);
+      // display: flex;
+      .intro-title {
+        @include title($myH3, 700, 0, 0 0 0.5em 0, 0, 0);
+      }
+      .intro-img {
+        @include imagesCover(100%, none, 0 0 0.3em 0, none, 0 0 0 20px);
+      }
+      .intro-paragraph {
+        @include paragraph($myP, $myMedium, 0, none, 0, 0 0 0 20px);
+      }
+    }
+    .introduction__col:nth-child(1n) {
+      @include borderLeft;
+      border-bottom: 1px solid $borderColor;
+    }
+    .introduction__col:nth-child(2n) {
+      @include borderRight;
+      border-bottom: none;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .introduction {
+    @include grid3(none, none);
+    .introduction__left {
+      @include leftSide(100%);
+    }
+    .introduction__right {
+      @include rightSide(100%);
+    }
+    .introduction__center {
+      @include gridInner2;
+      .introduction__col {
+        @include boxClip($bodyBg);
+        display: flex;
+        .intro-title {
+          // @include title($myH3, 700, 0, 0);
+          writing-mode: vertical-lr;
+          transform: rotate(180deg);
+          text-align: right;
+        }
+        .intro-img {
+          @include imagesCover(calc(100% - $myH3), none, 0 0 0 10px, none, 0 0 0 20px);
+        }
+        .intro-paragraph {
+          @include paragraph($myP, $myMedium, 0, 0 0 0 10px, 0, 0 0 0 20px);
+        }
+      }
+      .introduction__col:nth-child(1n) {
+        @include borderLeft;
+        border-bottom: 1px solid #1e1e1e;
+        padding: 10px 0;
+      }
+      .introduction__col:nth-child(2n) {
+        @include borderRight;
+      }
+    }
+  }
+}

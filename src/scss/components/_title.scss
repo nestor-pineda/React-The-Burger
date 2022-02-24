@@ -12,7 +12,7 @@
     @include boxClip($titleBg);
     @include boxPadding;
     h2 {
-      @include title($myH2, $myBold, 0, 20px);
+      @include title($myH2, $myBold, 0, 20px, 0, 20px);
       text-align: center;
     }
   }
