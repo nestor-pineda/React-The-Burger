@@ -16,7 +16,10 @@
         @include title($myH3, $myBold, 0, 10px 0px 0 10px, 0, 20px 0px 10px 20px);
       }
       .reserv-paragraph {
-        @include paragraph($myP, $myMedium, 10px 0 0 0, 0 0 10px 10px, 10px 0 0 0, 0 0 20px 20px);
+        @include paragraph($myP, $myMedium, 10px 0 0 0, 0 10px 10px 10px, 10px 0 0 0, 0 20px 20px 20px);
+      }
+      .form-wrapper {
+        padding: 0.5em;
       }
     }
     .reservation__col:nth-child(1n) {
@@ -24,6 +27,18 @@
     }
     .reservation__col:nth-child(2n) {
       @include border3;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .reservation {
+    .reservation__center {
+      .reservation__col {
+        .form-wrapper {
+          padding: 1em;
+        }
+      }
     }
   }
 }

@@ -11,8 +11,9 @@ const Reservation = () => {
           <p className="reserv-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis provident, reiciendis ullam accusamus, adipisci</p>
         </div>
         <div className="reservation__col">
-          <h3 className="reserv-title">The Story</h3>
-          <Form />
+          <div className="form-wrapper">
+            <Form />
+          </div>
         </div>
       </div>
       <div className="reservation__right"></div>
