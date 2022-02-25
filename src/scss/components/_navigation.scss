@@ -1,0 +1,14 @@
+@import "../styles.scss";
+
+.navigation {
+  @include grid3(1px solid $borderColor, 1px solid $borderColor);
+  .navigation__left {
+    @include leftSide(100%);
+  }
+  .navigation__right {
+    @include rightSide(100%);
+  }
+  .navigation__center {
+    @include boxPadding;
+  }
+}

@@ -9,5 +9,6 @@
     @include rightSide(100%);
   }
   .hero-slider__center {
+    @include boxPadding;
   }
 }
