@@ -50,6 +50,22 @@
   height: $height;
 }
 
+// For Inner 4 cols grid Menu
+@mixin gridInner4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 0.5em;
+  width: 100%;
+  @media (min-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+  @media (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 // For Inner 3 cols grid
 @mixin gridInner3 {
   display: grid;
@@ -74,7 +90,7 @@
 
 // For Cliping BG color
 @mixin boxClip($bgColor) {
-  background-color: $bgColor;
+  background: $bgColor;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;

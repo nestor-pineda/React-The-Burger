@@ -1,0 +1,15 @@
+@import "../styles.scss";
+
+.menu-section {
+  @include grid3(none, none);
+  .menu-section__left {
+    @include leftSide(100%);
+  }
+  .menu-section__right {
+    @include rightSide(100%);
+  }
+  .menu-section__center {
+    @include gridInner4;
+    @include boxPadding;
+  }
+}
