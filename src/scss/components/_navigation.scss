@@ -12,3 +12,37 @@
     @include boxPadding;
   }
 }
+
+.pre-navigation {
+  @include grid3(none, none);
+  .pre-navigation__left {
+    @include leftSide(10px);
+  }
+  .pre-navigation__right {
+    @include rightSide(10px);
+  }
+}
+
+// Bootstrap elements
+.nav-logo {
+  width: 100%;
+  max-width: 140px;
+}
+
+.nav-offcanvas-logo {
+  width: 100%;
+  max-width: 110px;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url(../../../public/images/menu-icon.svg) !important;
+}
