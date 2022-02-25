@@ -1,9 +1,9 @@
 import ThemeProvider from "./Context/ThemeContext/ThemeProvider";
-import Layout from "./components/Layout";
+import Layout from "./Components/Layout";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import routes from "./Config/routes";
 import { AuthProvider } from "./Context/LoginContext";
-import AppRoutes from "./components/AppRoute";
+import AppRoutes from "./Components/AppRoute";
 
 // Hacemos un bucle a través de las rutas que definimos en el routes.js en el componente react-router Routes para configurar el enrutamiento en nuestra aplicación.
 // AuthProvider nos asegurará que cada componente de nuestra aplicación tenga acceso al contexto del Login.

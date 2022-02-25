@@ -10,7 +10,7 @@ function Dashboard(props) {
 
   const handleLogout = () => {
     logout(dispatch); //llama a la acción logout
-    navigate("/"); //navega de nuevo al login sin usuario
+    navigate("/login"); //navega de nuevo al login sin usuario
   };
   return (
     <div style={{ padding: 10 }}>
