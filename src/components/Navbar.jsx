@@ -32,13 +32,15 @@ const Navigation = () => {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                   <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Nav.Link href="/">Home</Nav.Link>
-
+                    <Link to="/">Home</Link>
+                    <Link to="/menu">Menu</Link>
+                    <Link to="/signin">signin</Link>
+                    {/* <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/menu">Menu</Nav.Link>
                     <Nav.Link href="/dashboard">Dashboard</Nav.Link>
                     <Nav.Link href="/register">Register</Nav.Link>
                     <Nav.Link href="/login">Login</Nav.Link>
-                    <Nav.Link href="2">Logout</Nav.Link>
+                    <Nav.Link href="2">Logout</Nav.Link> */}
                   </Nav>
                 </Offcanvas.Body>
               </Navbar.Offcanvas>

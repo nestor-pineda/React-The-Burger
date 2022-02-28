@@ -12,18 +12,18 @@ function App() {
   return (
     <ThemeProvider>
       <div className="theme">
-        <Layout>
-          <AuthProvider>
-            <Router>
+        <AuthProvider>
+          <Router>
+            <Layout>
               <Routes>
                 {routes.map((route) => (
                   <Route key={route.path} path={route.path} element={route.element} />
                 ))}
                 <Route element={<AppRoutes />} path="/dashboard" />
               </Routes>
-            </Router>
-          </AuthProvider>
-        </Layout>
+            </Layout>
+          </Router>
+        </AuthProvider>
       </div>
     </ThemeProvider>
   );

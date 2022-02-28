@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../scss/components/_footer.scss";
 
 const Footer = () => {
@@ -14,9 +15,9 @@ const Footer = () => {
           </div>
           <div className="footer__col">
             <nav>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
+              <Link to="/">Home</Link>
+              <Link to="/menu">Menu</Link>
+              <Link to="/signin">signin</Link>
             </nav>
           </div>
         </div>
