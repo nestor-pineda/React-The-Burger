@@ -3,6 +3,7 @@ import Login from "../Pages/Login";
 import NotFound from "../Pages/NotFoud";
 import Home from "../Pages/Home";
 import Menu from "../Pages/Menu";
+import SingleProduct from "../Pages/SingleProduct";
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
   {
     path: "/menu",
     element: <Menu />,
+    isPrivate: false,
+  },
+  {
+    path: "/single",
+    element: <SingleProduct />,
     isPrivate: false,
   },
   {

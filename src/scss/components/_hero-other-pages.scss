@@ -1,0 +1,20 @@
+@import "../styles.scss";
+
+.hero-other-page {
+  @include grid3(none, none);
+  .hero-other-page__left {
+    @include leftSide(100%);
+  }
+  .hero-other-page__right {
+    @include rightSide(100%);
+  }
+  .hero-other-page__center {
+    @include boxPadding;
+    .hero-other-page__img {
+      width: 100%;
+      height: 25vh;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

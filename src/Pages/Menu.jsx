@@ -1,8 +1,13 @@
+import HeroOtherPages from "../Components/HeroOtherPages";
 import MenuSection from "../Components/MenuSection";
 
 const Menu = () => {
-  return <MenuSection />;
+  return (
+    <>
+      <HeroOtherPages />
+      <MenuSection />
+    </>
+  );
 };
 
 export default Menu;
-<MenuSection />;

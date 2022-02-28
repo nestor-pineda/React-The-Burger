@@ -1,0 +1,75 @@
+@import "../styles.scss";
+
+.single-product {
+  @include grid3(none, none);
+  .single-product__left {
+    @include leftSide(100%);
+  }
+  .single-product__right {
+    @include rightSide(100%);
+  }
+  .single-product__center {
+    @include gridInner2;
+
+    .single-product__col {
+      @include boxPadding;
+      @include boxClip($bodyBg);
+      .single-product__img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+      }
+      .single-product__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .single-product__title {
+          @include title($myH3, $myBold, 0, 0, 0, 0px 0px 0px 10px);
+        }
+        .single-product__price {
+          @include title($myH3, $myBold, 0, 10px 0px 0 0, 0, 20px 0px 0px 10px);
+          color: $priceSingleProduct;
+        }
+        .single-product__paragraph {
+          @include paragraph($myP, $myMedium, 0, 10px 0px 0 0, 0, 20px 0px 0px 10px);
+        }
+        .single-product__subtitle {
+          @include title($myH5, $myBold, 0, 10px 0px 0 0, 0, 20px 0px 0px 10px);
+        }
+        .single-product__allergens {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          padding: 10px 0 0 0;
+          .single-product__allergen-img {
+            width: 40px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .single-product {
+    .single-product__center {
+      .single-product__col {
+        .single-product__info {
+          .single-product__allergens {
+            padding: 20px 0 0 10px;
+            .single-product__allergen-img {
+              width: 50px;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+      .single-product__col--border {
+        border-right: 1px solid $borderColor;
+      }
+    }
+  }
+}
