@@ -20,10 +20,58 @@ footer {
         .logo {
           width: 100%;
           max-width: 140px;
-          padding: 20px 0px 10px 20px;
+          padding: 20px 0px 10px 10px;
         }
         h3 {
-          @include title($myH3, $myBold, 0, 10px 0px 10px 20px, 0, 20px 0px 10px 20px);
+          @include title($myH3, $myBold, 0, 10px 0px 10px 10px, 0, 20px 0px 10px 20px);
+        }
+        .footer__input-icon-wrap {
+          border-bottom: 1px solid $borderColor;
+          display: flex;
+          width: 100%;
+          max-width: 250px;
+          margin: 0 10px 10px 10px;
+          .footer__input-icon {
+            background: transparent;
+            border: none;
+            outline: none;
+            padding-right: 0px;
+            padding-bottom: 0px;
+          }
+          .footer__input-with-icon {
+            border: none;
+            outline: none;
+            background: transparent;
+            width: 100%;
+            max-width: 240px;
+            padding-bottom: 5px;
+          }
+        }
+        .footer__nav {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 10px 0;
+          .footer__main-nav,
+          .footer__legal-nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            .footer__link {
+              text-decoration: none;
+              @include paragraph($myP, $myMedium, 0, 0px 0px 0px 10px, 0, 0px 0px 0px 20px);
+              transition: color 0.5s ease 0s;
+              &:hover {
+                color: $hoverLinkFooter;
+              }
+            }
+          }
+          .footer__main-nav {
+            padding-right: 30px;
+          }
+        }
+        .footer_copyright {
+          @include paragraph($myP, $myMedium, 0, 10px 0px 0px 10px, 0, 20px 0px 10px 20px);
         }
       }
       .footer__col:nth-child(1n) {
@@ -62,6 +110,42 @@ footer {
             width: 100%;
             max-width: 140px;
             padding: 20px 0px 10px 20px;
+          }
+          .footer__input-icon-wrap {
+            margin: 0 20px;
+            max-width: 170px;
+            .footer__input-with-icon {
+              max-width: 160px;
+            }
+          }
+          .footer__nav {
+            padding: 20px 0 0 0;
+            .footer__main-nav {
+              padding-right: 30px;
+            }
+            .footer__legal-nav {
+              padding-right: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  footer {
+    .footer {
+      .footer__center {
+        .footer__col {
+          .logo {
+            max-width: 170px;
+          }
+          .footer__input-icon-wrap {
+            max-width: 250px;
+            .footer__input-with-icon {
+              max-width: 240px;
+            }
           }
         }
       }

@@ -11,14 +11,40 @@ const Footer = () => {
             <img className="logo" src="images/the-burger-logo.png" alt="burger logo" />
           </div>
           <div className="footer__col">
-            <h3>Hear it First</h3>
+            <h3>Hear it first</h3>
+            <div class="footer__input-icon-wrap">
+              <input type="text" class="footer__input-with-icon" id="form-name" placeholder="Your email" />
+              <button class="footer__input-icon">
+                <span class="material-icons">arrow_right_alt</span>
+              </button>
+            </div>
           </div>
           <div className="footer__col">
-            <nav>
-              <Link to="/">Home</Link>
-              <Link to="/menu">Menu</Link>
-              <Link to="/signin">signin</Link>
+            <nav className="footer__nav">
+              <div className="footer__main-nav">
+                <Link to="/" className="footer__link">
+                  Home
+                </Link>
+                <Link to="/menu" className="footer__link">
+                  Menu
+                </Link>
+                <Link to="/login" className="footer__link">
+                  Login
+                </Link>
+              </div>
+              <div className="footer__legal-nav">
+                <Link to="/" className="footer__link">
+                  Terms & Conditions
+                </Link>
+                <Link to="/" className="footer__link">
+                  Cookie Policy
+                </Link>
+                <Link to="/" className="footer__link">
+                  Privacy Policy
+                </Link>
+              </div>
             </nav>
+            <p className="footer_copyright">2022 © All rights reserved</p>
           </div>
         </div>
         <div className="footer__right"></div>
