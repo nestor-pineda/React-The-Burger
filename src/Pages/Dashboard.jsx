@@ -1,6 +1,7 @@
 import React from "react";
 import { useAuthDispatch, logout, useAuthState } from "../Context/LoginContext";
 import { useNavigate } from "react-router-dom";
+import UserData from "../Components/UserData";
 import "../scss/pages/dashboard.scss";
 
 function Dashboard(props) {
@@ -13,15 +14,18 @@ function Dashboard(props) {
     navigate("/login"); //navega de nuevo al login sin usuario
   };
   return (
-    <div style={{ padding: 10 }}>
-      <div className="dashboardPage">
-        <h1>Dashboard</h1>
-        <button className="logoutBtn" onClick={handleLogout}>
-          Logout
-        </button>
+    <>
+      <UserData />
+      <div style={{ padding: 10 }}>
+        <div className="dashboardPage">
+          <h1>Dashboard</h1>
+          <button className="logoutBtn" onClick={handleLogout}>
+            Logout
+          </button>
+        </div>
+        <p>Welcome {userDetails.user.email}</p>
       </div>
-      <p>Welcome {userDetails.user.email}</p>
-    </div>
+    </>
   );
 }
 

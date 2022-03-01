@@ -1,24 +1,78 @@
 @import "../styles.scss";
-
 @import "../theme/theme";
 
-.change-data {
-  display: flex;
-  .change-data__lable {
+.user-data {
+  @include grid3(none, none);
+  .user-data__left {
+    @include leftSide(100%);
   }
+  .user-data__right {
+    @include rightSide(100%);
+  }
+  .user-data__center {
+    @include gridInner2;
 
-  input.change-data_input {
-    outline: none;
-    border: 0px;
-    color: $inputUserData;
-  }
-  .change-data__button {
-    @include themed() {
-      color: t("text");
-      background: t("bg");
+    .user-data__col {
+      @include boxPadding;
+      @include boxClip(#cccccc);
+      .reservation-info__title {
+        @include title($myH5, $myBold, 0, 10px 0px 0 10px, 0, 20px 0px 0px 20px);
+      }
+      .reservation-info {
+        display: flex;
+        .reservation-info__texts {
+          .reservation-info__paragraph {
+            @include paragraph($myP, $myMedium, 0, 0 0 5px 10px, 0, 0 0 5px 20px);
+            span {
+              color: $inputUserData;
+            }
+          }
+        }
+      }
+      .change-data {
+        @include boxPadding;
+        width: 100%;
+        .change-data__form {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 10px;
+          width: 100%;
+          .change-data__left {
+            display: flex;
+            .change-data__lable {
+              @include paragraph($myP, $myMedium, 0, 0, 0, 0);
+            }
+            input.change-data__input {
+              outline: none;
+              border: 0px;
+              color: $inputUserData;
+              background-color: transparent;
+            }
+          }
+          .change-data__right {
+            display: flex;
+            .change-data_edit-icon {
+              font-size: 20px;
+            }
+            .change-data__button {
+              // @include themed() {
+              //   color: t("text");
+              //   background: t("bg");
+              // }
+              margin-left: 10px;
+              background-color: transparent;
+              outline: none;
+              border: 1px solid $borderColor;
+            }
+          }
+        }
+      }
     }
-    // background-color: $buttonChangeDataBg;
-    outline: none;
-    border: 0px;
+    .user-data__col:nth-child(1n) {
+      @include border1;
+    }
+    .user-data__col:nth-child(2n) {
+      @include border3;
+    }
   }
 }
