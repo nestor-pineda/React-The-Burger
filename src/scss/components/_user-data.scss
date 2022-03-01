@@ -1,0 +1,24 @@
+@import "../styles.scss";
+
+@import "../theme/theme";
+
+.change-data {
+  display: flex;
+  .change-data__lable {
+  }
+
+  input.change-data_input {
+    outline: none;
+    border: 0px;
+    color: $inputUserData;
+  }
+  .change-data__button {
+    @include themed() {
+      color: t("text");
+      background: t("bg");
+    }
+    // background-color: $buttonChangeDataBg;
+    outline: none;
+    border: 0px;
+  }
+}

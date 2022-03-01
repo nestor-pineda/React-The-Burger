@@ -34,14 +34,10 @@ const Navigation = () => {
                   <Nav className="justify-content-end flex-grow-1 pe-3">
                     <Link to="/">Home</Link>
                     <Link to="/menu">Menu</Link>
-                    <Link to="/signin">signin</Link>
-                    {/* <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/menu">Menu</Nav.Link>
-                    <Nav.Link href="/dashboard">Dashboard</Nav.Link>
-                    <Nav.Link href="/register">Register</Nav.Link>
-                    <Nav.Link href="/login">Login</Nav.Link>
-                    <Nav.Link href="2">Logout</Nav.Link> */}
+                    <Link to="/single">Single</Link>
+                    <Link to="/login">Signin</Link>
                   </Nav>
+                  <Switcher />
                 </Offcanvas.Body>
               </Navbar.Offcanvas>
             </Container>

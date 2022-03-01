@@ -71,7 +71,7 @@ footer {
           }
         }
         .footer_copyright {
-          @include paragraph($myP, $myMedium, 0, 10px 0px 0px 10px, 0, 20px 0px 10px 20px);
+          @include paragraph($myP, $myMedium, 0, 10px 0px 0px 10px, 0, 20px 0px 20px 20px);
         }
       }
       .footer__col:nth-child(1n) {

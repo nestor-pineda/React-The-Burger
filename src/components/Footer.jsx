@@ -12,10 +12,10 @@ const Footer = () => {
           </div>
           <div className="footer__col">
             <h3>Hear it first</h3>
-            <div class="footer__input-icon-wrap">
-              <input type="text" class="footer__input-with-icon" id="form-name" placeholder="Your email" />
-              <button class="footer__input-icon">
-                <span class="material-icons">arrow_right_alt</span>
+            <div className="footer__input-icon-wrap">
+              <input type="text" className="footer__input-with-icon" id="form-name" placeholder="Your email" />
+              <button className="footer__input-icon">
+                <span className="material-icons">arrow_right_alt</span>
               </button>
             </div>
           </div>
