@@ -1,0 +1,62 @@
+@import "../styles.scss";
+
+.menu-double-section {
+  @include grid3(1px solid $myColor1, none);
+  .menu-double-section__left {
+    @include leftSide(100%);
+  }
+  .menu-double-section__right {
+    @include rightSide(100%);
+  }
+  .menu-double-section__center {
+    @include gridInner2;
+
+    .menu-double-section__col {
+      @include gridInner2Gap;
+      @include boxPadding;
+      @include boxClip($bodyBg);
+      .menu-double-section__title {
+        @include title($myH2, $myBold, 0, 20px, 0, 20px);
+        text-align: center;
+        grid-column-end: span 1;
+      }
+      .menu-double-section__title--purple {
+        background-color: $menuCardPrice3;
+      }
+      .menu-double-section__title--brown {
+        background-color: $menuCardPrice2;
+      }
+    }
+    .menu-double-section__col--border-top {
+      border-top: 1px solid $borderColor;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .menu-double-section {
+    .menu-double-section__center {
+      .menu-double-section__col--border-right {
+        border-right: 1px solid $borderColor;
+      }
+      .menu-double-section__col--border-top {
+        border-top: 0px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .menu-double-section {
+    .menu-double-section__center {
+      .menu-double-section__col {
+        .menu-double-section__title {
+          grid-column-end: span 2;
+        }
+      }
+      // .menu-double-section__col--border-top {
+      //   border-top: nome !im;
+      // }
+    }
+  }
+}

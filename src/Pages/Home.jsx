@@ -5,12 +5,14 @@ import Title from "../Components/Title";
 import ImageGallery from "../Components/ImageGallery";
 
 const Home = () => {
+  const titleText = "The Gallery";
+
   return (
     <>
       <HeroHome />
       <Reservation />
       <Introduction />
-      <Title />
+      <Title titleText={titleText} />
       <ImageGallery />
     </>
   );

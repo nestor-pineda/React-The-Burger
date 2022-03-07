@@ -88,6 +88,22 @@
   }
 }
 
+// For Inner 2 cols grid with gap
+@mixin gridInner2Gap {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 0.5em;
+  width: 100%;
+  @media (min-width: 600px) {
+    grid-gap: 1em;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 // For Cliping BG color
 @mixin boxClip($bgColor) {
   background: $bgColor;

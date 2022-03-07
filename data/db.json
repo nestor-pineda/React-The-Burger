@@ -32,5 +32,41 @@
       "alergens": "",
       "id": 4
     }
+  ],
+  "starters": [
+    {
+      "title": "Patatas Fritas",
+      "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "price": "13.95",
+      "image": "aperitivo-1.jpg",
+      "alergens": "",
+      "id": 1
+    },
+    {
+      "title": "Wrap de queso",
+      "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "price": "14.95",
+      "image": "aperitivo-2.jpg",
+      "alergens": "",
+      "id": 2
+    }
+  ],
+  "deserts": [
+    {
+      "title": "Chocolate",
+      "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "price": "13.95",
+      "image": "postre-1.jpg",
+      "alergens": "",
+      "id": 1
+    },
+    {
+      "title": "Tarta",
+      "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "price": "14.95",
+      "image": "postre-2.jpg",
+      "alergens": "",
+      "id": 2
+    }
   ]
 }

@@ -1,14 +1,14 @@
 @import "../styles.scss";
 
-.menu-section {
+.burgers-section {
   @include grid3(none, none);
-  .menu-section__left {
+  .burgers-section__left {
     @include leftSide(100%);
   }
-  .menu-section__right {
+  .burgers-section__right {
     @include rightSide(100%);
   }
-  .menu-section__center {
+  .burgers-section__center {
     @include gridInner4;
     @include boxPadding;
   }

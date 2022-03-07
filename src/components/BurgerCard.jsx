@@ -1,6 +1,6 @@
 import "../scss/components/_menu-card.scss";
 
-const MenuCard = ({ burgers }) => {
+const BurgerCard = ({ burgers }) => {
   return (
     <>
       {burgers.map((item) => {
@@ -20,4 +20,4 @@ const MenuCard = ({ burgers }) => {
   );
 };
 
-export default MenuCard;
+export default BurgerCard;
