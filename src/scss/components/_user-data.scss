@@ -20,12 +20,28 @@
       }
       .reservation-info {
         display: flex;
+        justify-content: space-between;
+        @include boxPadding;
         .reservation-info__texts {
           .reservation-info__paragraph {
-            @include paragraph($myP, $myMedium, 0, 0 0 5px 10px, 0, 0 0 5px 20px);
+            @include paragraph($myP, $myMedium, 0, 0 0 10px 0, 0, 0 0 10px 0px);
             span {
               color: $inputUserData;
             }
+          }
+        }
+        .reservation-info_cancel {
+          background-color: transparent;
+          color: $btnTextColor;
+          outline: none;
+          border: 1px solid $borderColor;
+          transition: background-color 0.2s ease 0s, color 0.3s ease 0s;
+          height: 23px;
+          min-width: 65px;
+          align-self: flex-end;
+          &:hover {
+            background-color: $btnDashboardHover;
+            color: $btnTextColorHover;
           }
         }
       }
@@ -45,8 +61,10 @@
             input.change-data__input {
               outline: none;
               border: 0px;
+              @include paragraph($myP, $myMedium, 0, 0 0 0 3px, 0, 0 0 0 3px);
               color: $inputUserData;
               background-color: transparent;
+              width: 100%;
             }
           }
           .change-data__right {
@@ -61,8 +79,15 @@
               // }
               margin-left: 10px;
               background-color: transparent;
+              color: $btnTextColor;
               outline: none;
               border: 1px solid $borderColor;
+              transition: background-color 0.2s ease 0s, color 0.3s ease 0s;
+
+              &:hover {
+                background-color: $btnDashboardHover;
+                color: $btnTextColorHover;
+              }
             }
           }
         }
@@ -76,3 +101,62 @@
     }
   }
 }
+
+// @media (min-width: 600px) {
+//   .user-data {
+
+//     .user-data__center {
+
+//       .user-data__col {
+
+//           .reservation-info_cancel {
+//             background-color: transparent;
+//             color: $btnTextColor;
+//             outline: none;
+//             border: 1px solid $borderColor;
+//             transition: background-color 0.2s ease 0s, color 0.3s ease 0s;
+//             height: 23px;
+//             min-width: 65px;
+//             align-self: flex-end;
+//             &:hover {
+//               background-color: $btnDashboardHover;
+//               color: $btnTextColorHover;
+//             }
+//           }
+//         }
+//         .change-data {
+
+//           .change-data__form {
+
+//             .change-data__right {
+
+//               .change-data_edit-icon {
+//                 font-size: 20px;
+//               }
+//               .change-data__button {
+
+//                 margin-left: 10px;
+//                 background-color: transparent;
+//                 color: $btnTextColor;
+//                 outline: none;
+//                 border: 1px solid $borderColor;
+//                 transition: background-color 0.2s ease 0s, color 0.3s ease 0s;
+
+//                 &:hover {
+//                   background-color: $btnDashboardHover;
+//                   color: $btnTextColorHover;
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//       .user-data__col:nth-child(1n) {
+//         @include border1;
+//       }
+//       .user-data__col:nth-child(2n) {
+//         @include border3;
+//       }
+//     }
+//   }
+// }

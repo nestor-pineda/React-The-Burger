@@ -28,7 +28,7 @@ const UserData = () => {
                 Email: <span>nestor@gmail.com</span>
               </p>
             </div>
-            <button>Cancel</button>
+            <button className="reservation-info_cancel">Cancel</button>
           </div>
         </div>
         <div className="user-data__col">

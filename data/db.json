@@ -1,0 +1,36 @@
+{
+  "burgers": [
+    {
+      "title": "Super Burger",
+      "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "price": "13.95",
+      "image": "burger-1.jpg",
+      "alergens": "",
+      "id": 1
+    },
+    {
+      "title": "Super Burger Double",
+      "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "price": "14.95",
+      "image": "burger-2.jpg",
+      "alergens": "",
+      "id": 2
+    },
+    {
+      "title": "Maxi Double Burger",
+      "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "price": "15.95",
+      "image": "burger-3.jpg",
+      "alergens": "",
+      "id": 3
+    },
+    {
+      "title": "Extra de Fua",
+      "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "price": "15.50",
+      "image": "burger-4.jpg",
+      "alergens": "",
+      "id": 4
+    }
+  ]
+}
