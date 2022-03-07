@@ -6,11 +6,12 @@ import Title from "../Components/Title";
 import "../scss/pages/menu.scss";
 
 const Menu = () => {
+  const imageHero = { image1: "images/home-3.jpg", image2: "images/home-2.jpg" };
   const titleText = "The Burgers";
 
   return (
     <>
-      <HeroOtherPages />
+      <HeroOtherPages imageHero={imageHero.image1} />
       <Title titleText={titleText} />
       <BurgerSection />
       <div className="menu-double-section">
@@ -27,6 +28,7 @@ const Menu = () => {
         </div>
         <div className="menu-double-section__right"></div>
       </div>
+      <HeroOtherPages imageHero={imageHero.image2} />
     </>
   );
 };
