@@ -1,22 +1,9 @@
+import useFetch from "../CustomHooks/useFetch";
 import MenuCard from "./MenuCard";
 import "../scss/components/_menu-section.scss";
-import { useEffect, useState } from "react";
 
 const MenuSection = () => {
-  const [burgers, setBurgers] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch("http://localhost:8000/burgers")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setBurgers(data);
-        setLoading(false);
-        console.log(data);
-      });
-  }, []);
+  const { apiData: burgers, loading, error } = useFetch("http://localhost:8000/burgers");
 
   return (
     <div className="menu-section">
@@ -24,6 +11,7 @@ const MenuSection = () => {
       <div className="menu-section__center">
         {burgers && <MenuCard burgers={burgers} />}
         {loading && <div>Loading...</div>}
+        {error && <div>{error}</div>}
       </div>
       <div className="menu-section__right"></div>
     </div>
