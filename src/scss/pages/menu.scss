@@ -1,0 +1,30 @@
+@import "../styles.scss";
+
+.menu-double-section {
+  @include grid3(none, none);
+  .menu-double-section__left {
+    @include leftSide(100%);
+  }
+  .menu-double-section__right {
+    @include rightSide(100%);
+  }
+  .menu-double-section__center {
+    @include gridInner2;
+
+    .menu-double-section__col {
+      @include gridInner2Gap;
+      @include boxPadding;
+      @include boxClip($bodyBg);
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .menu-double-section {
+    .menu-double-section__center {
+      .menu-double-section__col--border {
+        border-right: 1px solid $borderColor;
+      }
+    }
+  }
+}
