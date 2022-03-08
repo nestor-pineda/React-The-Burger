@@ -68,5 +68,39 @@
       "alergens": "",
       "id": 2
     }
+  ],
+  "drinks": [
+    {
+      "title": "Smoothie",
+      "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "price": "4.50",
+      "image": "bebida-1.jpg",
+      "alergens": "",
+      "id": 1
+    },
+    {
+      "title": "Batido de chocolare",
+      "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "price": "3.95",
+      "image": "bebida-2.jpg",
+      "alergens": "",
+      "id": 2
+    },
+    {
+      "title": "Cafe",
+      "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "price": "2.50",
+      "image": "bebida-3.jpg",
+      "alergens": "",
+      "id": 3
+    },
+    {
+      "title": "Smoothie 2",
+      "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "price": "3.95",
+      "image": "bebida-4.jpg",
+      "alergens": "",
+      "id": 4
+    }
   ]
 }

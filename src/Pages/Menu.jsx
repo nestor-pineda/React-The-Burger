@@ -3,16 +3,19 @@ import BurgerSection from "../Components/BurgersSection";
 import StartersSection from "../Components/SartersSection";
 import DesertsSection from "../Components/DesertsSection";
 import Title from "../Components/Title";
+import DrinksSection from "../Components/DrinksSection";
 import "../scss/pages/menu.scss";
 
 const Menu = () => {
   const imageHero = { image1: "images/home-3.jpg", image2: "images/home-2.jpg" };
-  const titleText = "The Burgers";
+  const titleText = { title1: "The Burgers", title2: "The Drinks" };
+  const titleBg = { greenBg: "greenBg", blueBg: "blueBg" };
 
   return (
     <>
       <HeroOtherPages imageHero={imageHero.image1} />
-      <Title titleText={titleText} />
+      {/* <Title titleText={titleText.title1} /> */}
+      <Title titleText={titleText.title1} titleBg={titleBg.greenBg} />
       <BurgerSection />
       <div className="menu-double-section">
         <div className="menu-double-section__left"></div>
@@ -29,6 +32,8 @@ const Menu = () => {
         <div className="menu-double-section__right"></div>
       </div>
       <HeroOtherPages imageHero={imageHero.image2} />
+      <Title titleText={titleText.title2} titleBg={titleBg.blueBg} />
+      <DrinksSection />
     </>
   );
 };

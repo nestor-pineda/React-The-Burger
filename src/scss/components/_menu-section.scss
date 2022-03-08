@@ -1,19 +1,15 @@
 @import "../styles.scss";
 
-.burgers-section {
+.menu-section {
   @include grid3(none, none);
-  .burgers-section__left {
+  .menu-section__left {
     @include leftSide(100%);
   }
-  .burgers-section__right {
+  .menu-section__right {
     @include rightSide(100%);
   }
-  .burgers-section__center {
+  .menu-section__center {
     @include gridInner4;
     @include boxPadding;
   }
-}
-
-.buc {
-  color: red;
 }
