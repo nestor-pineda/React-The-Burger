@@ -1,8 +1,8 @@
 import useFetch from "../CustomHooks/useFetch";
 import MenuCard from "./MenuCard";
 
-const DesertsSection = () => {
-  const { apiData, loading, error } = useFetch("http://localhost:8000/deserts");
+const PostresSection = () => {
+  const { apiData, loading, error } = useFetch("http://localhost:8000/carta");
 
   const bgColor = { class: "menu-card__price menu-card__price--brown" };
 
@@ -10,9 +10,9 @@ const DesertsSection = () => {
     <>
       {loading && <div>Loading...</div>}
       {error && <div>{error}</div>}
-      {apiData && <MenuCard apiData={apiData} bgColor={bgColor.class} />}
+      {apiData && <MenuCard apiData={apiData.filter((item) => item.type === "postre")} bgColor={bgColor.class} />}
     </>
   );
 };
 
-export default DesertsSection;
+export default PostresSection;

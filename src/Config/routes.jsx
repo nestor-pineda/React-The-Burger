@@ -22,7 +22,7 @@ const routes = [
     isPrivate: false,
   },
   {
-    path: "/single",
+    path: "/single/:id",
     element: <SingleProduct />,
     isPrivate: false,
   },

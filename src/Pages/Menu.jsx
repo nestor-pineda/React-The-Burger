@@ -1,9 +1,9 @@
 import HeroOtherPages from "../Components/HeroOtherPages";
 import BurgerSection from "../Components/BurgersSection";
-import StartersSection from "../Components/SartersSection";
-import DesertsSection from "../Components/DesertsSection";
+import AperitivosSection from "../Components/AperitivosSection";
+import PostresSection from "../Components/PostresSection";
 import Title from "../Components/Title";
-import DrinksSection from "../Components/DrinksSection";
+import BebidasSection from "../Components/BebidasSection";
 import "../scss/pages/menu.scss";
 
 const Menu = () => {
@@ -22,18 +22,18 @@ const Menu = () => {
         <div className="menu-double-section__center">
           <div className="menu-double-section__col menu-double-section__col--border-right">
             <h1 className="menu-double-section__title menu-double-section__title--purple">Starters</h1>
-            <StartersSection />
+            <AperitivosSection />
           </div>
           <div className="menu-double-section__col menu-double-section__col--border-top">
             <h1 className="menu-double-section__title menu-double-section__title--brown">Deserts</h1>
-            <DesertsSection />
+            <PostresSection />
           </div>
         </div>
         <div className="menu-double-section__right"></div>
       </div>
       <HeroOtherPages imageHero={imageHero.image2} />
       <Title titleText={titleText.title2} titleBg={titleBg.blueBg} />
-      <DrinksSection />
+      <BebidasSection />
     </>
   );
 };
