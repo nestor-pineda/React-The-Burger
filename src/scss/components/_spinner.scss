@@ -1,0 +1,91 @@
+@import "../styles.scss";
+
+@-webkit-keyframes breakout {
+  0%,
+  40% {
+    border-width: 25px;
+  }
+  60% {
+    border-color: green;
+    border-width: 6px;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    border-color: red;
+    opacity: 0;
+    -webkit-transform: scale(2);
+    transform: scale(2);
+  }
+}
+@keyframes breakout {
+  0%,
+  40% {
+    border-width: 25px;
+  }
+  60% {
+    border-color: $myColor6;
+    border-width: 6px;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    border-color: $myColor6;
+    opacity: 0;
+    -webkit-transform: scale(2);
+    transform: scale(2);
+  }
+}
+
+.spinner-wrapper {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .breakout {
+    position: relative;
+    height: 50px;
+    width: 50px;
+  }
+  .breakout:before {
+    -webkit-animation: breakout 1.5s infinite;
+    animation: breakout 1.5s infinite;
+    display: block;
+    content: "";
+    height: 100%;
+    width: 100%;
+    border: 6px solid $spinnerColor;
+    border-radius: 100%;
+  }
+}
+
+// sets the space that the spinner fills in the grid for 4 colums grid
+
+.spinnerGrid4 {
+  grid-column-end: span 1;
+}
+
+@media (min-width: 600px) {
+  .spinnerGrid4 {
+    grid-column-end: span 2;
+  }
+}
+@media (min-width: 900px) {
+  .spinnerGrid4 {
+    grid-column-end: span 4;
+  }
+}
+
+// sets the space that the spinner fills in the grid for 2 colums grid
+
+.spinnerGrid2 {
+  grid-column-end: span 1;
+}
+@media (min-width: 900px) {
+  .spinnerGrid2 {
+    grid-column-end: span 2;
+  }
+}

@@ -21,7 +21,7 @@ const Navigation = () => {
           <Navbar expand={false}>
             <Container fluid>
               <Navbar.Brand href="/">
-                <img src="images/the-burger-logo.png" alt="The Burger" className="nav-logo" />
+                <img src="/images/the-burger-logo.png" alt="The Burger" className="nav-logo" />
               </Navbar.Brand>
               <Navbar.Toggle />
               <Navbar.Offcanvas id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="end">

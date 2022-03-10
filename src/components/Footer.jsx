@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer__left"></div>
         <div className="footer__center">
           <div className="footer__col">
-            <img className="logo" src="images/the-burger-logo.png" alt="burger logo" />
+            <img className="logo" src="/images/the-burger-logo.png" alt="burger logo" />
           </div>
           <div className="footer__col">
             <h3>Hear it first</h3>
