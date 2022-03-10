@@ -1,14 +1,16 @@
 import useFetch from "../CustomHooks/useFetch";
-import DesertCard from "./DesertCard";
+import MenuCard from "./MenuCard";
 
 const DesertsSection = () => {
-  const { apiData: deserts, loading, error } = useFetch("http://localhost:8000/deserts");
+  const { apiData, loading, error } = useFetch("http://localhost:8000/deserts");
+
+  const bgColor = { class: "menu-card__price menu-card__price--brown" };
 
   return (
     <>
       {loading && <div>Loading...</div>}
       {error && <div>{error}</div>}
-      {deserts && <DesertCard deserts={deserts} />}
+      {apiData && <MenuCard apiData={apiData} bgColor={bgColor.class} />}
     </>
   );
 };

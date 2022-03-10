@@ -1,15 +1,17 @@
 import useFetch from "../CustomHooks/useFetch";
-import BurgerCard from "./DrinkCard";
+import MenuCard from "./MenuCard";
 import "../scss/components/_menu-section.scss";
 
 const BurgerSection = () => {
-  const { apiData: drinks, loading, error } = useFetch("http://localhost:8000/drinks");
+  const { apiData, loading, error } = useFetch("http://localhost:8000/drinks");
+
+  const bgColor = { class: "menu-card__price menu-card__price--blue" };
 
   return (
     <div className="menu-section">
       <div className="menu-section__left"></div>
       <div className="menu-section__center">
-        {drinks && <BurgerCard drinks={drinks} />}
+        {apiData && <MenuCard apiData={apiData} bgColor={bgColor.class} />}
         {loading && <div>Loading...</div>}
         {error && <div>{error}</div>}
       </div>

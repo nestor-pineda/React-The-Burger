@@ -1,14 +1,16 @@
 import useFetch from "../CustomHooks/useFetch";
-import StarterCard from "./StarterCard";
+import MenuCard from "./MenuCard";
 
 const StartersSection = () => {
-  const { apiData: starters, loading, error } = useFetch("http://localhost:8000/starters");
+  const { apiData, loading, error } = useFetch("http://localhost:8000/starters");
+
+  const bgColor = { class: "menu-card__price menu-card__price--purple" };
 
   return (
     <>
       {loading && <div>Loading...</div>}
       {error && <div>{error}</div>}
-      {starters && <StarterCard starters={starters} />}
+      {apiData && <MenuCard apiData={apiData} bgColor={bgColor.class} />}
     </>
   );
 };
