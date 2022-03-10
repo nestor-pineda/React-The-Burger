@@ -26,7 +26,6 @@ const SingleProduct = () => {
 
   return (
     <>
-      {/* {apiData && <p>{apiData.title}</p>} */}
       {apiData && <SingleProductInfo apiData={apiData} />}
 
       {/* {loading && <div>Loading...</div>}
