@@ -14,7 +14,11 @@
 
     .user-data__col {
       @include boxPadding;
-      @include boxClip(#cccccc);
+      @include boxClip(#ccc);
+      @include themed() {
+        color: t("text");
+        background: t("dashboarBg");
+      }
       .reservation-info__title {
         @include title($myH5, $myBold, 0, 10px 0px 0 10px, 0, 20px 0px 0px 20px);
       }
@@ -73,10 +77,10 @@
               font-size: 20px;
             }
             .change-data__button {
-              // @include themed() {
-              //   color: t("text");
-              //   background: t("bg");
-              // }
+              @include themed() {
+                color: t("text");
+                background: t("bg");
+              }
               margin-left: 10px;
               background-color: transparent;
               color: $btnTextColor;

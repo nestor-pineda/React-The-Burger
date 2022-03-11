@@ -27,7 +27,7 @@ const Navigation = () => {
               <Navbar.Offcanvas id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="end">
                 <Offcanvas.Header closeButton>
                   <Offcanvas.Title id="offcanvasNavbarLabel">
-                    <img src="images/the-burger-logo.png" alt="The Burger" className="nav-offcanvas-logo" />
+                    <img src="/images/the-burger-logo.png" alt="The Burger" className="nav-offcanvas-logo" />
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
