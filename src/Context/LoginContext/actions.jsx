@@ -1,5 +1,5 @@
 // Este archivo contiene y exporta funciones asíncronas que enviarán cambios de estado al reducer.
-const ROOT_URL = "https://secret-hamlet-03431.herokuapp.com";
+const ROOT_URL = "https://the-burger-server.herokuapp.com/api";
 
 export async function loginUser(dispatch, loginPayload) {
   const requestOptions = {
@@ -13,7 +13,7 @@ export async function loginUser(dispatch, loginPayload) {
     let response = await fetch(`${ROOT_URL}/login`, requestOptions);
     let data = await response.json();
 
-    if (data.user) {
+    if (data) {
       dispatch({ type: "LOGIN_SUCCESS", payload: data });
       localStorage.setItem("currentUser", JSON.stringify(data));
       return data;
