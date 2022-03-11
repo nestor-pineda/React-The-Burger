@@ -5,13 +5,9 @@ footer {
     @include grid3(1px solid, 1px solid);
     .footer__left {
       @include leftSide(100%);
-      // border-right: 1px solid $borderColor;
-      // height: 100%;
     }
     .footer__right {
       @include rightSide(100%);
-      // border-left: 1px solid $borderColor;
-      // height: 100%;
     }
     .footer__center {
       @include gridInner3;
@@ -76,15 +72,12 @@ footer {
       }
       .footer__col:nth-child(1n) {
         @include border1;
-        // padding: 0.5em 0.5em 0 0.5em;
       }
       .footer__col:nth-child(2n) {
         @include border2;
-        // padding: 0 0.5em 0 0.5em;
       }
       .footer__col:nth-child(3n) {
         @include border3;
-        // padding: 0 0.5em 0.5em 0.5em;
       }
     }
   }
@@ -92,11 +85,9 @@ footer {
     @include grid3(none, none);
     .post-footer__left {
       @include leftSide(10px);
-      // height: 10px;
     }
     .post-footer__right {
       @include rightSide(10px);
-      // height: 10px;
     }
   }
 }
