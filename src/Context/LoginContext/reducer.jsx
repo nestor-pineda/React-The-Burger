@@ -1,6 +1,6 @@
 // Este archivo contiene el reducer que utilizaremos para gestionar el estado de autenticación.
 let user = localStorage.getItem("currentUser") ? JSON.parse(localStorage.getItem("currentUser")).user : "";
-let token = localStorage.getItem("currentUser") ? JSON.parse(localStorage.getItem("currentUser")).auth_token : "";
+let token = localStorage.getItem("currentUser") ? JSON.parse(localStorage.getItem("currentUser")).token : "";
 
 // Estado inicial
 export const initialState = {
@@ -19,10 +19,11 @@ export const AuthReducer = (initialState, action) => {
         loading: true,
       };
     case "LOGIN_SUCCESS":
+      console.log(user)
       return {
         ...initialState,
         user: action.payload.user,
-        token: action.payload.auth_token,
+        token: action.payload.token,
         loading: false,
       };
     case "LOGOUT":
@@ -30,13 +31,14 @@ export const AuthReducer = (initialState, action) => {
         ...initialState,
         user: "",
         token: "",
+        errorMessage: null
       };
 
     case "LOGIN_ERROR":
       return {
         ...initialState,
         loading: false,
-        errorMessage: action.error,
+        errorMessage: "Email o contraseña incorrectos",
       };
 
     default:
