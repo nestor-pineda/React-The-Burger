@@ -3,7 +3,7 @@ import MenuCard from "./MenuCard";
 import Spinner from "./Spinner";
 
 const AperitivosSection = () => {
-  const { apiData, loading, error } = useFetch("http://localhost:8000/carta");
+  const { apiData, loading, error } = useFetch("https://the-burger-server.herokuapp.com/api/carta");
 
   const bgColor = { class: "menu-card__price menu-card__price--purple" };
 
