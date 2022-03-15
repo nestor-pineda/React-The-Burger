@@ -4,7 +4,7 @@
       "title": "Super Burger",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       "price": "13.95",
-      "image": "burgers/burger-1.jpg",
+      "image": "burgers/burguer-1",
       "alergens": "alergenos/alergeno-1.png",
       "id": 1,
       "type": "burguer"
@@ -13,7 +13,7 @@
       "title": "Super Burger Double",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       "price": "14.95",
-      "image": "burgers/burger-2.jpg",
+      "image": "burgers/burguer-2.jpg",
       "alergens": "alergenos/alergeno-2.png",
       "id": 2,
       "type": "burguer"
@@ -22,7 +22,7 @@
       "title": "Maxi Double Burger",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       "price": "15.95",
-      "image": "burgers/burger-3.jpg",
+      "image": "burgers/burguer-3.jpg",
       "alergens": "alergenos/alergeno-3.png",
       "id": 3,
       "type": "burguer"
@@ -31,7 +31,7 @@
       "title": "Extra de Fua",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       "price": "15.50",
-      "image": "burgers/burger-4.jpg",
+      "image": "burgers/burguer-4.jpg",
       "alergens": "alergenos/alergeno-4.png",
       "id": 4,
       "type": "burguer"

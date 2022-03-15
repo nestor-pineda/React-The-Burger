@@ -5,10 +5,12 @@ import "../scss/components/_menu-section.scss";
 import "../scss/abstracts/_variables.scss";
 
 const BurgerSection = () => {
-  const { apiData, loading, error } = useFetch("http://localhost:8000/carta");
+  const { apiData, loading, error } = useFetch("https://the-burger-server.herokuapp.com/api/carta");
 
   const bgColor = { class: "menu-card__price menu-card__price--green" };
   const spinnerGrid = "spinnerGrid4";
+
+  console.log(apiData);
 
   return (
     <div className="menu-section">
@@ -24,3 +26,5 @@ const BurgerSection = () => {
 };
 
 export default BurgerSection;
+
+// https://the-burger-server.herokuapp.com/api/carta/type/:type
