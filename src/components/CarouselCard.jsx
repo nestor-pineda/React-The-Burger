@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "../scss/components/_menu-card.scss";
 
 const CarouselCard = ({ apiData, bgColor }) => {
+
   return (
     <>
       {apiData.map((item) => {

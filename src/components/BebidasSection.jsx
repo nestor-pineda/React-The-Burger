@@ -15,7 +15,6 @@ const BebidasSection = () => {
       <div className="menu-section__center">
         {loading && <Spinner spinnerGrid={spinnerGrid} />}
         {apiData && <MenuCard apiData={apiData.filter((item) => item.type === "bebida")} bgColor={bgColor.class} />}
-        {loading && <Spinner />}
         {error && <div>{error}</div>}
       </div>
       <div className="menu-section__right"></div>

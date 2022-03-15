@@ -1,23 +1,31 @@
-import React from "react";
-import AliceCarousel from "react-alice-carousel";
 import useFetch from "../CustomHooks/useFetch";
+import MenuCard from "../Components/MenuCard";
 import Spinner from "./Spinner";
-import "react-alice-carousel/lib/alice-carousel.css";
 
-const handleDragStart = (e) => e.preventDefault();
+const Carousel = ({ itemType }) => {
+  const { apiData, loading, error } = useFetch("https://the-burger-server.herokuapp.com/api/carta");
 
-const items = [
-  <img src="/images/burgers/burger-1.jpg" onDragStart={handleDragStart} alt="carousel" />,
-  <img src="/images/burgers/burger-1.jpg" onDragStart={handleDragStart} alt="carousel" />,
-  <img src="/images/burgers/burger-1.jpg" onDragStart={handleDragStart} alt="carousel" />,
-];
+  const foodType = itemType[0].type; // food type saved
 
-const Carousel = ({ apiData }) => {
-  // const { apiData, loading, error } = useFetch("http://localhost:8000/carta");
+  let bgColor = "";
+
+  if (foodType === "burguer") {
+    bgColor = "menu-card__price menu-card__price--green";
+  } else if (foodType === "bebida") {
+    bgColor = "menu-card__price menu-card__price--blue";
+  } else if (foodType === "aperitivo") {
+    bgColor = "menu-card__price menu-card__price--purple";
+  } else {
+    bgColor = "menu-card__price menu-card__price--brown";
+  }
 
   return (
     <>
-      <AliceCarousel mouseTracking items={items} />
+      <h1>food type : {foodType} </h1>
+
+      {loading && <p>Loading...</p>}
+      {apiData && <MenuCard apiData={apiData.filter((item) => item.type === foodType)} bgColor={bgColor} />}
+      {error && <div>{error}</div>}
     </>
   );
 };
