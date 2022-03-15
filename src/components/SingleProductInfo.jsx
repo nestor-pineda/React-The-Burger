@@ -15,8 +15,7 @@ const SingleProductInfo = ({ apiData }) => {
             <p className="single-product__paragraph">{apiData.body}</p>
             <h5 className="single-product__subtitle">Allergens</h5>
             <div className="single-product__allergens">
-              <img className="single-product__allergen-img" src="images/allergens/egg.png" alt="egg" />
-              <img className="single-product__allergen-img" src="images/allergens/gluten.png" alt="egg" />
+              <img className="single-product__allergen-img" src={`/images/${apiData.alergens}`} alt="alergenos" />
             </div>
           </div>
         </div>
