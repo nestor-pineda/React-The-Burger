@@ -24,7 +24,7 @@ const Carousel = ({ itemType }) => {
       <h1>food type : {foodType} </h1>
 
       {loading && <p>Loading...</p>}
-      {apiData && <MenuCard apiData={apiData.filter((item) => item.type === foodType)} bgColor={bgColor} />}
+      {apiData && <MenuCard apiData={apiData.filter((item) => item.type === foodType).slice(0, 4)} bgColor={bgColor} />}
       {error && <div>{error}</div>}
     </>
   );
