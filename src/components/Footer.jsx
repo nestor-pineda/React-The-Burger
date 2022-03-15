@@ -27,7 +27,7 @@ const Footer = () => {
             <img className="logo" src="/images/the-burger-logo.png" alt="burger logo" />
           </div>
           <div className="footer__col">
-            <h3>Hear it first</h3>
+            <h3>Hear it first!</h3>
 
             <form onSubmit={handleSubmit} className="footer__input-icon-wrap">
               <input type="text" className="footer__input-with-icon" value={email} onChange={(e) => setEmail(e.target.value)} id="form-name" placeholder="Your email"></input>
