@@ -1,42 +1,50 @@
 @import "../styles.scss";
 
-.menu-card {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid $borderColor;
-  .menu-card__title {
-    border-bottom: 1px solid $borderColor;
-    text-align: center;
-    @include boxPadding;
-    h5 {
-      @include title($myH5, $myBold, auto, auto, auto, auto);
-    }
-  }
-  .menu-card_image {
-    aspect-ratio: 16 / 12;
+.card-link {
+  text-decoration: none;
+
+  .menu-card {
     width: 100%;
-    @include boxClip(center center/cover no-repeat);
-    @include boxPadding;
-  }
-  .menu-card__price {
-    border-top: 1px solid $borderColor;
-    text-align: center;
-    @include boxPadding;
-    h5 {
-      @include title($myH5, $myMedium, auto, 10px 0, auto, auto);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $borderColor;
+    .menu-card__title {
+      border-bottom: 1px solid $borderColor;
+      text-align: center;
+      @include boxPadding;
+      h5 {
+        @include title($myH5, $myBold, auto, auto, auto, auto);
+      }
     }
-  }
-  .menu-card__price--green {
-    @include boxClip($menuCardPrice1);
-  }
-  .menu-card__price--purple {
-    @include boxClip($menuCardPrice3);
-  }
-  .menu-card__price--brown {
-    @include boxClip($menuCardPrice2);
-  }
-  .menu-card__price--blue {
-    @include boxClip($menuCardPrice4);
+    .menu-card_image {
+      aspect-ratio: 16 / 12;
+      width: 100%;
+      @include boxClip(center center/cover no-repeat);
+      @include boxPadding;
+      transition: all 0.2s ease-in-out;
+    }
+    .menu-card_image:hover {
+      transform: scale(1.02);
+    }
+    .menu-card__price {
+      border-top: 1px solid $borderColor;
+      text-align: center;
+      @include boxPadding;
+      h5 {
+        @include title($myH5, $myMedium, auto, 10px 0, auto, auto);
+      }
+    }
+    .menu-card__price--green {
+      @include boxClip($menuCardPrice1);
+    }
+    .menu-card__price--purple {
+      @include boxClip($menuCardPrice3);
+    }
+    .menu-card__price--brown {
+      @include boxClip($menuCardPrice2);
+    }
+    .menu-card__price--blue {
+      @include boxClip($menuCardPrice4);
+    }
   }
 }
