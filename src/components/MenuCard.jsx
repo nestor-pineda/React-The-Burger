@@ -7,7 +7,7 @@ const BurgerCard = ({ apiData, bgColor }) => {
       {apiData.map((item) => {
         console.log(item.image);
         return (
-          <Link key={item.idPlato} to={`/single/${item.idPlato}`}>
+          <Link className="card-link" key={item.idPlato} to={`/single/${item.idPlato}`}>
             <div className="menu-card">
               <div className="menu-card__title">
                 <h5>{item.name}</h5>

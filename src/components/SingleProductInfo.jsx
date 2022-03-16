@@ -8,7 +8,7 @@ const SingleProductInfo = ({ apiData }) => {
       <div className="single-product__left"></div>
       <div className="single-product__center">
         <div className="single-product__col single-product__col--border">
-          <img className="single-product__img" src={`/images/${apiData.image}.jpg`} alt="hero other page" />
+          <img className="single-product__img" src={`/images/${apiData.image}.jpg`} alt="single menu item" />
         </div>
         <div className="single-product__col">
           <div className="single-product__info">
