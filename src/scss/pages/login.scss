@@ -31,11 +31,21 @@
       }
       button {
         width: calc(100% - 40px);
-        background-color: green;
-        border: none;
+        // background-color: green;
+        border: 1px solid $borderColor;
         outline: none;
-        padding: 10px 0;
+        padding: 5px;
         margin: 0 20px;
+        @include boxClip($white);
+        // @include boxPadding;
+        transition: all 1s ease 0s;
+        &:hover {
+          padding: 0px;
+        }
+        .button-text {
+          padding: 15px;
+          box-sizing: content-box;
+        }
       }
 
       .login-form {
@@ -48,6 +58,10 @@
           input {
             margin-bottom: 5px;
             margin: 0px 20px;
+            border-radius: 0px;
+            outline: none;
+            border: 1px solid $borderColor;
+            padding: 5px;
           }
         }
       }
