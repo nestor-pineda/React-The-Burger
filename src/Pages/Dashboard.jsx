@@ -7,8 +7,7 @@ import { LoginContext } from "../Context/LoginContext/LoginContext"
 
 function Dashboard(props) {
   let navigate = useNavigate();
-  const {userLogged, setUserLogged} = useContext(LoginContext);
-  console.log(userLogged)
+  const {setUserLogged} = useContext(LoginContext);
   // const dispatch = useAuthDispatch(); // lee el método dispatch del contexto
   // const userDetails = useAuthState(); //lee los detalles del usuario del contexto
 
@@ -29,7 +28,7 @@ function Dashboard(props) {
             Logout
           </button>
         </div>
-        <p>Welcome {userLogged}</p>
+        <p>Welcome</p>
       </div>
     </>
   );

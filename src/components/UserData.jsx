@@ -1,6 +1,27 @@
 import "../scss/components/_user-data.scss";
+import { LoginContext } from "../Context/LoginContext/LoginContext";
+import React, {useContext, useEffect, useState} from "react";
 
 const UserData = () => {
+
+
+  const {userLogged, setUserLogged} = useContext(LoginContext);
+  const [userInfo, setUserInfo] = useState({})
+
+
+  const requestUserInfo = () => {
+    fetch(`https://the-burger-server.herokuapp.com/api/users/email/${userLogged}`).then((res) => res.json()).then((resInJSON) => {
+      setUserInfo(resInJSON[0])
+    })
+  } 
+
+
+  useEffect(() => {
+    requestUserInfo();
+    console.log(userInfo)
+  }, []);
+
+
   return (
     <div className="user-data">
       <div className="user-data__left"></div>
@@ -37,7 +58,7 @@ const UserData = () => {
             <form className="change-data__form">
               <div className="change-data__left">
                 <label className="change-data__lable">Name: </label>
-                <input className="change-data__input" type="text" defaultValue="Nestor" />
+                <input className="change-data__input" type="text" defaultValue={userInfo.name} />
               </div>
               <div className="change-data__right">
                 <span className="material-icons change-data_edit-icon">edit</span>
@@ -48,7 +69,7 @@ const UserData = () => {
             <form className="change-data__form">
               <div className="change-data__left">
                 <label className="change-data__lable">Email: </label>
-                <input className="change-data__input" type="text" defaultValue="nestor@gmail.com" />
+                <input className="change-data__input" type="text" defaultValue={userInfo.email} />
               </div>
               <div className="change-data__right">
                 <span className="material-icons change-data_edit-icon">edit</span>
@@ -59,7 +80,7 @@ const UserData = () => {
             <form className="change-data__form">
               <div className="change-data__left">
                 <label className="change-data__lable">Telephone: </label>
-                <input className="change-data__input" type="text" defaultValue="123456789" />
+                <input className="change-data__input" type="text" defaultValue={userInfo.phone} />
               </div>
               <div className="change-data__right">
                 <span className="material-icons change-data_edit-icon">edit</span>
@@ -70,7 +91,7 @@ const UserData = () => {
             <form className="change-data__form">
               <div className="change-data__left">
                 <label className="change-data__lable">Password: </label>
-                <input className="change-data__input" type="text" defaultValue="**********" />
+                <input className="change-data__input" type="password" defaultValue="**********" />
               </div>
               <div className="change-data__right">
                 <span className="material-icons change-data_edit-icon">edit</span>
