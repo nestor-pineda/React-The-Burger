@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LoginContext } from "../Context/LoginContext/LoginContext";
-// import { loginUser, useAuthState, useAuthDispatch } from "../Context/LoginContext";
+import { Link } from "react-router-dom";
 import "../scss/pages/login.scss";
 
 const INITIAL_STATE = {
@@ -14,21 +14,7 @@ const Login = () => {
   const { setUserLogged } = useContext(LoginContext);
   const [formData, setFormData] = useState(INITIAL_STATE);
   const [loginError, setLoginError] = useState(false);
-  // const dispatch = useAuthDispatch();
   let navigate = useNavigate();
-  // const { loading, errorMessage } = useAuthState(); //lee los valores del loading y errorMessages del contexto
-
-  // const handleLogin = async (e) => {
-  //   e.preventDefault();
-
-  //   try {
-  //     // let response = await loginUser(dispatch, { email, password });
-  //     if (!response.user) return;
-  //     navigate("/dashboard");
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
 
   const submitForm = (ev) => {
     ev.preventDefault();
@@ -75,7 +61,7 @@ const Login = () => {
         <div className="login-section__left"></div>
         <div className="login-section__center">
           <div className="form-container">
-            <h1 className="form-container__title">Login Page</h1>
+            <h1 className="form-container__title">Login</h1>
             {/* {errorMessage ? <p className="error">{errorMessage}</p> : null} */}
             <form className="login-form" onSubmit={submitForm}>
               <div className="login-form__item">
@@ -87,7 +73,14 @@ const Login = () => {
 
               {loginError ? <p className="error">Usuario o contraseña incorrectos</p> : null}
               <button type="submit">
-                <span className="button-text">Login</span>
+                <p className="login-button">Login</p>
+              </button>
+              <p>Haven't got an account jet?</p>
+
+              <button>
+                <Link to="/register" className="register-button">
+                  Register
+                </Link>
               </button>
             </form>
           </div>

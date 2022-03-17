@@ -35,16 +35,19 @@
         border: 1px solid $borderColor;
         outline: none;
         padding: 5px;
-        margin: 0 20px;
+        margin: 5px 20px 20px 20px;
         @include boxClip($white);
         // @include boxPadding;
         transition: all 1s ease 0s;
         &:hover {
-          padding: 0px;
+          background-color: $titleBg;
         }
-        .button-text {
-          padding: 15px;
-          box-sizing: content-box;
+        p {
+          margin: 0px;
+        }
+        a {
+          text-decoration: none;
+          color: $titleColor;
         }
       }
 

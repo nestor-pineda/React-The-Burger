@@ -38,9 +38,9 @@ const Navigation = () => {
                     <Link to="/menu" className="nav-item">
                       Menu
                     </Link>
-                    {/* <Link to="/single" className="nav-item">
-                      Single
-                    </Link> */}
+                    <Link to="/register" className="nav-item">
+                      Register
+                    </Link>
                     <Link to="/login" className="nav-item">
                       Signin
                     </Link>
