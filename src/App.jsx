@@ -2,7 +2,8 @@ import ThemeProvider from "./Context/ThemeContext/ThemeProvider";
 import Layout from "./Components/Layout";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import routes from "./Config/routes";
-import { AuthProvider } from "./Context/LoginContext";
+import { LoginProvider } from "./Context/LoginContext/LoginContext";
+// import { AuthProvider } from "./Context/LoginContext";
 import AppRoutes from "./Components/AppRoute";
 
 // Hacemos un bucle a través de las rutas que definimos en el routes.js en el componente react-router Routes para configurar el enrutamiento en nuestra aplicación.
@@ -12,7 +13,8 @@ function App() {
   return (
     <ThemeProvider>
       <div className="theme">
-        <AuthProvider>
+        {/* <AuthProvider> */}
+        <LoginProvider>
           <Router>
             <Layout>
               <Routes>
@@ -23,7 +25,8 @@ function App() {
               </Routes>
             </Layout>
           </Router>
-        </AuthProvider>
+        </LoginProvider>
+        {/* </AuthProvider> */}
       </div>
     </ThemeProvider>
   );
