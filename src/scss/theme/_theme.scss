@@ -12,11 +12,13 @@ $themes: (
     bg: $bgColorLight,
     text: $textColorLight,
     footerBg: $bgColorFooterLight,
+    dashboarBg: $dashboarGbLight,
   ),
   dark: (
     bg: $bgColorDark,
     text: $textColorDark,
     footerBg: $bgColorFooterDark,
+    dashboarBg: $dashboarGbDark,
   ),
 );
 

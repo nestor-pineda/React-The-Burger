@@ -1,0 +1,12 @@
+{
+  "newsletter": [
+    {
+      "email": "nestor@gmail.com",
+      "id": 1
+    },
+    {
+      "email": "hh@gmail.com",
+      "id": 2
+    }
+  ]
+}

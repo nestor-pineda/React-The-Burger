@@ -21,21 +21,29 @@ const Navigation = () => {
           <Navbar expand={false}>
             <Container fluid>
               <Navbar.Brand href="/">
-                <img src="images/the-burger-logo.png" alt="The Burger" className="nav-logo" />
+                <img src="/images/the-burger-logo.png" alt="The Burger" className="nav-logo" />
               </Navbar.Brand>
               <Navbar.Toggle />
               <Navbar.Offcanvas id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="end">
                 <Offcanvas.Header closeButton>
                   <Offcanvas.Title id="offcanvasNavbarLabel">
-                    <img src="images/the-burger-logo.png" alt="The Burger" className="nav-offcanvas-logo" />
+                    <img src="/images/the-burger-logo.png" alt="The Burger" className="nav-offcanvas-logo" />
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                   <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Link to="/">Home</Link>
-                    <Link to="/menu">Menu</Link>
-                    <Link to="/single">Single</Link>
-                    <Link to="/login">Signin</Link>
+                    <Link to="/" className="nav-item">
+                      Home
+                    </Link>
+                    <Link to="/menu" className="nav-item">
+                      Menu
+                    </Link>
+                    {/* <Link to="/single" className="nav-item">
+                      Single
+                    </Link> */}
+                    <Link to="/login" className="nav-item">
+                      Signin
+                    </Link>
                   </Nav>
                   <Switcher />
                 </Offcanvas.Body>

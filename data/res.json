@@ -1,0 +1,58 @@
+{
+  "reservation": [
+    {
+      "name": "nestor pepe",
+      "people": "2",
+      "date": "2022-03-12",
+      "time": "13:30",
+      "email": "nestorpinedaelvira@gmail.com",
+      "phone": "564564635",
+      "id": 1
+    },
+    {
+      "name": "Pedro",
+      "people": "4",
+      "date": "2022-06-05",
+      "time": "12:09",
+      "email": "welltamotorbikes@gmail.com",
+      "phone": "2543453",
+      "id": 2
+    },
+    {
+      "name": "MArcos",
+      "people": "4",
+      "date": "2022-06-03",
+      "time": "13:00",
+      "email": "ewrwer@gmail.com",
+      "phone": "342535353",
+      "id": 3
+    },
+    {
+      "name": "Fernando",
+      "people": "3",
+      "date": "2022-05-02",
+      "time": "14:30",
+      "email": "nene@lkks.com",
+      "phone": "2453634573",
+      "id": 4
+    },
+    {
+      "name": "Raquel",
+      "people": "2",
+      "date": "2022-03-11",
+      "time": "12:00",
+      "email": "fmelendezmv@gmail.com",
+      "phone": "23523656",
+      "id": 5
+    },
+    {
+      "name": "MAria",
+      "people": "6",
+      "date": "2022-03-24",
+      "time": "12:30",
+      "email": "fmelendezmv@gmail.com",
+      "phone": "661720443",
+      "id": 6
+    }
+  ]
+}

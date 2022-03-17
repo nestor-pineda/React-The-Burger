@@ -1,106 +1,113 @@
 {
-  "burgers": [
+  "carta": [
     {
       "title": "Super Burger",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       "price": "13.95",
-      "image": "burger-1.jpg",
-      "alergens": "",
-      "id": 1
+      "image": "burgers/burguer-1",
+      "alergens": "alergenos/alergeno-1.png",
+      "id": 1,
+      "type": "burguer"
     },
     {
       "title": "Super Burger Double",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       "price": "14.95",
-      "image": "burger-2.jpg",
-      "alergens": "",
-      "id": 2
+      "image": "burgers/burguer-2.jpg",
+      "alergens": "alergenos/alergeno-2.png",
+      "id": 2,
+      "type": "burguer"
     },
     {
       "title": "Maxi Double Burger",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       "price": "15.95",
-      "image": "burger-3.jpg",
-      "alergens": "",
-      "id": 3
+      "image": "burgers/burguer-3.jpg",
+      "alergens": "alergenos/alergeno-3.png",
+      "id": 3,
+      "type": "burguer"
     },
     {
       "title": "Extra de Fua",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       "price": "15.50",
-      "image": "burger-4.jpg",
-      "alergens": "",
-      "id": 4
-    }
-  ],
-  "starters": [
+      "image": "burgers/burguer-4.jpg",
+      "alergens": "alergenos/alergeno-4.png",
+      "id": 4,
+      "type": "burguer"
+    },
+
     {
       "title": "Patatas Fritas",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       "price": "13.95",
-      "image": "aperitivo-1.jpg",
-      "alergens": "",
-      "id": 1
+      "image": "aperitivos/aperitivo-1.jpg",
+      "alergens": "alergenos/alergeno-5.png",
+      "id": 5,
+      "type": "aperitivo"
     },
     {
       "title": "Wrap de queso",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       "price": "14.95",
-      "image": "aperitivo-2.jpg",
-      "alergens": "",
-      "id": 2
-    }
-  ],
-  "deserts": [
+      "image": "aperitivos/aperitivo-2.jpg",
+      "alergens": "alergenos/alergeno-1.png",
+      "id": 6,
+      "type": "aperitivo"
+    },
     {
       "title": "Chocolate",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       "price": "13.95",
-      "image": "postre-1.jpg",
-      "alergens": "",
-      "id": 1
+      "image": "postres/postre-1.jpg",
+      "alergens": "alergenos/alergeno-2.png",
+      "id": 7,
+      "type": "postre"
     },
     {
       "title": "Tarta",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       "price": "14.95",
-      "image": "postre-2.jpg",
-      "alergens": "",
-      "id": 2
-    }
-  ],
-  "drinks": [
+      "image": "postres/postre-2.jpg",
+      "alergens": "alergenos/alergeno-3.png",
+      "id": 8,
+      "type": "postre"
+    },
     {
       "title": "Smoothie",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       "price": "4.50",
-      "image": "bebida-1.jpg",
-      "alergens": "",
-      "id": 1
+      "image": "bebidas/bebida-1.jpg",
+      "alergens": "alergenos/alergeno-4.png",
+      "id": 9,
+      "type": "bebida"
     },
     {
       "title": "Batido de chocolare",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       "price": "3.95",
-      "image": "bebida-2.jpg",
-      "alergens": "",
-      "id": 2
+      "image": "bebidas/bebida-2.jpg",
+      "alergens": "alergenos/alergeno-5.png",
+      "id": 10,
+      "type": "bebida"
     },
     {
       "title": "Cafe",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       "price": "2.50",
-      "image": "bebida-3.jpg",
-      "alergens": "",
-      "id": 3
+      "image": "bebidas/bebida-3.jpg",
+      "alergens": "alergenos/alergeno-4.png",
+      "id": 11,
+      "type": "bebida"
     },
     {
       "title": "Smoothie 2",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       "price": "3.95",
-      "image": "bebida-4.jpg",
-      "alergens": "",
-      "id": 4
+      "image": "bebidas/bebida-4.jpg",
+      "alergens": "alergenos/alergeno-3.png",
+      "id": 12,
+      "type": "bebida"
     }
   ]
 }

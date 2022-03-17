@@ -1,23 +1,40 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../scss/components/_footer.scss";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newsletter = { email };
+
+    fetch("http://localhost:8002/newsletter/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newsletter),
+    }).then(() => {
+      setEmail("");
+    });
+  };
+
   return (
     <footer>
       <div className="footer">
         <div className="footer__left"></div>
         <div className="footer__center">
           <div className="footer__col">
-            <img className="logo" src="images/the-burger-logo.png" alt="burger logo" />
+            <img className="logo" src="/images/the-burger-logo.png" alt="burger logo" />
           </div>
           <div className="footer__col">
-            <h3>Hear it first</h3>
-            <div className="footer__input-icon-wrap">
-              <input type="text" className="footer__input-with-icon" id="form-name" placeholder="Your email" />
+            <h3>Hear it first!</h3>
+
+            <form onSubmit={handleSubmit} className="footer__input-icon-wrap">
+              <input type="text" className="footer__input-with-icon" value={email} onChange={(e) => setEmail(e.target.value)} id="form-name" placeholder="Your email"></input>
               <button className="footer__input-icon">
                 <span className="material-icons">arrow_right_alt</span>
               </button>
-            </div>
+            </form>
           </div>
           <div className="footer__col">
             <nav className="footer__nav">

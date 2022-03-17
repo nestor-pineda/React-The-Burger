@@ -70,6 +70,7 @@ const Login = () => {
   }
 
   return (
+
     <div className="container">
       <div className="formContainer">
         <h1>Login Page</h1>
@@ -91,8 +92,9 @@ const Login = () => {
           <button type="submit">Login</button>
           {/* <button onClick={handleLogin}>login</button> */}
         </form>
-      </div>
-    </div>
+            </div>
+        </div>
+   
   );
 }
 
