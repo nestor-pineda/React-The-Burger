@@ -71,16 +71,6 @@ const Form = () => {
           <Link to="/login">Must login</Link>
         </button>
       )}
-
-      {/* {loading ? (
-        <button className="submit" type="submit">
-          Sending
-        </button>
-      ) : (
-        <button className="submit" type="submit">
-          Submit
-        </button>
-      )} */}
     </form>
   );
 };

@@ -4,10 +4,22 @@ import { Container } from "react-bootstrap";
 import { Offcanvas } from "react-bootstrap";
 import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import { useContext } from "react";
+import { LoginContext } from "../Context/LoginContext/LoginContext";
+import { BiLogInCircle, BiLogOutCircle } from "react-icons/bi";
 import "../scss/components/_navigation.scss";
 
 const Navigation = () => {
+  const { userLogged, setUserLogged } = useContext(LoginContext);
+
+  const handleLogout = () => {
+    // logout(dispatch); //llama a la acción logout
+    localStorage.removeItem("user");
+    sessionStorage.removeItem("email");
+    setUserLogged(null);
+    // navigate("/login"); //navega de nuevo al login sin usuario
+  };
+
   return (
     <nav>
       <div className="pre-navigation">
@@ -38,14 +50,29 @@ const Navigation = () => {
                     <Link to="/menu" className="nav-item">
                       Menu
                     </Link>
-                    <Link to="/register" className="nav-item">
-                      Register
-                    </Link>
-                    <Link to="/login" className="nav-item">
-                      Signin
-                    </Link>
+
+                    {userLogged ? (
+                      <Link to="/dashboard" className="nav-item">
+                        Dashboar
+                      </Link>
+                    ) : (
+                      <Link to="/register" className="nav-item">
+                        Register
+                      </Link>
+                    )}
                   </Nav>
-                  <Switcher />
+                  {/* <Switcher /> */}
+                  {userLogged ? (
+                    <button className="login-out" onClick={() => handleLogout()}>
+                      <BiLogOutCircle />
+                    </button>
+                  ) : (
+                    <button className="login-out" to="/login">
+                      <Link to="/login">
+                        <BiLogInCircle />
+                      </Link>
+                    </button>
+                  )}
                 </Offcanvas.Body>
               </Navbar.Offcanvas>
             </Container>
