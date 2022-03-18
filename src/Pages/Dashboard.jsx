@@ -1,21 +1,18 @@
-import React, {useContext} from "react";
-// import { useAuthDispatch, logout, useAuthState } from "../Context/LoginContext";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import UserData from "../Components/UserData";
 import "../scss/pages/dashboard.scss";
-import { LoginContext } from "../Context/LoginContext/LoginContext"
+import { LoginContext } from "../Context/LoginContext/LoginContext";
 
-function Dashboard(props) {
+const Dashboard = (props) => {
   let navigate = useNavigate();
-  const {userLogged, setUserLogged} = useContext(LoginContext);
-  console.log(userLogged)
-  // const dispatch = useAuthDispatch(); // lee el método dispatch del contexto
-  // const userDetails = useAuthState(); //lee los detalles del usuario del contexto
+  const { userLogged, setUserLogged } = useContext(LoginContext);
+  console.log(userLogged);
 
   const handleLogout = () => {
     // logout(dispatch); //llama a la acción logout
-    localStorage.removeItem("user")
-    sessionStorage.removeItem("email")
+    localStorage.removeItem("user");
+    sessionStorage.removeItem("email");
     setUserLogged(null);
     navigate("/login"); //navega de nuevo al login sin usuario
   };
@@ -33,6 +30,6 @@ function Dashboard(props) {
       </div>
     </>
   );
-}
+};
 
 export default Dashboard;

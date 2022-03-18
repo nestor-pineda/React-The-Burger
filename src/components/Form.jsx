@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import { LoginContext } from "../Context/LoginContext/LoginContext";
 import "../scss/components/_form.scss";
 
 const Form = () => {
+  const { userLogged } = useContext(LoginContext);
+
   const [name, setName] = useState("");
   const [people, setPeople] = useState("");
   const [date, setDate] = useState("2022-03-11");
@@ -58,7 +62,17 @@ const Form = () => {
         <input type="tel" className="text" value={phone} onChange={(event) => setPhone(event.target.value)} id="phone" name="phone" placeholder="Phone" required></input>
       </div>
 
-      {loading ? (
+      {userLogged ? (
+        <button className="submit" type="submit">
+          Make reservation
+        </button>
+      ) : (
+        <button className="submit">
+          <Link to="/login">Must login</Link>
+        </button>
+      )}
+
+      {/* {loading ? (
         <button className="submit" type="submit">
           Sending
         </button>
@@ -66,7 +80,7 @@ const Form = () => {
         <button className="submit" type="submit">
           Submit
         </button>
-      )}
+      )} */}
     </form>
   );
 };
