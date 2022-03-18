@@ -56,38 +56,35 @@ const Login = () => {
   };
 
   return (
-    <>
-      <div className="login-section">
-        <div className="login-section__left"></div>
-        <div className="login-section__center">
-          <div className="form-container">
-            <h1 className="form-container__title">Login</h1>
-            {/* {errorMessage ? <p className="error">{errorMessage}</p> : null} */}
-            <form className="login-form" onSubmit={submitForm}>
-              <div className="login-form__item">
-                <input name="email" type="text" placeholder="Email" value={formData.email} onChange={handleChange}></input>
-              </div>
-              <div className="login-form__item">
-                <input name="password" type="password" placeholder="Password" value={formData.password} onChange={handleChange}></input>
-              </div>
+    <div className="login-section">
+      <div className="login-section__left"></div>
+      <div className="login-section__center">
+        <div className="form-container">
+          <h2 className="form-container__title">Login</h2>
+          <form className="login-form" onSubmit={submitForm}>
+            <div className="login-form__item">
+              <input name="email" type="text" placeholder="Email" value={formData.email} onChange={handleChange}></input>
+            </div>
+            <div className="login-form__item">
+              <input name="password" type="password" placeholder="Password" value={formData.password} onChange={handleChange}></input>
+            </div>
 
-              {loginError ? <p className="error">Usuario o contraseña incorrectos</p> : null}
-              <button type="submit">
-                <p className="login-button">Login</p>
-              </button>
-              <p>Haven't got an account jet?</p>
+            {loginError ? <p className="error">Usuario o contraseña incorrectos</p> : null}
+            <button type="submit">
+              <p className="login-button">Login</p>
+            </button>
+            <p>Haven't got an account yet?</p>
 
-              <button>
-                <Link to="/register" className="register-button">
-                  Register
-                </Link>
-              </button>
-            </form>
-          </div>
+            <button>
+              <Link to="/register" className="register-button">
+                Register
+              </Link>
+            </button>
+          </form>
         </div>
-        <div className="login-section__right"></div>
       </div>
-    </>
+      <div className="login-section__right"></div>
+    </div>
   );
 };
 
