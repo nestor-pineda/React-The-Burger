@@ -12,7 +12,7 @@ function CustomToggle({ children, eventKey }) {
   );
 }
 
-function Example({ allReservas, cancelReserva, userInfo, requestAllReservation, requestReservation }) {
+function Example({ allReservas, cancelReserva, userInfo, requestAllReservation, requestReservation, reservasUser }) {
   return (
     <Accordion defaultActiveKey="0">
       {/* <Card>
@@ -29,8 +29,7 @@ function Example({ allReservas, cancelReserva, userInfo, requestAllReservation, 
         </Card.Header>
         <Accordion.Collapse eventKey="1">
           <Card.Body>
-            {userInfo.isAdmin === "true" ? <button onClick={requestAllReservation}>Show reservations</button> : <button onClick={requestReservation}>Reservas</button>}
-
+            {userInfo.isAdmin === "true" ? <button onClick={requestAllReservation}>Reservas</button> : <button onClick={requestReservation}>Reservas</button>}
             {allReservas.map((reserva) => {
               return (
                 <div className="reservation-info" key={reserva.idReserva}>
@@ -46,6 +45,35 @@ function Example({ allReservas, cancelReserva, userInfo, requestAllReservation, 
                     </p>
                     <p className="reservation-info__paragraph">
                       Time: <span>{reserva.hour}</span>
+                    </p>
+                  </div>
+                  <button className="reservation-info_cancel" onClick={() => cancelReserva(reserva)}>
+                    Cancel
+                  </button>
+                </div>
+              );
+            })}
+            {reservasUser.map((reserva) => {
+              return (
+                <div className="reservation-info" key={reserva.idReserva}>
+                  <div className="reservation-info__texts">
+                    <p className="reservation-info__paragraph">
+                      Name: <span>{userInfo.name}</span>
+                    </p>
+                    <p className="reservation-info__paragraph">
+                      People: <span>{reserva.numero}</span>
+                    </p>
+                    <p className="reservation-info__paragraph">
+                      Date: <span>{reserva.date}</span>
+                    </p>
+                    <p className="reservation-info__paragraph">
+                      Time: <span>{reserva.hour}</span>
+                    </p>
+                    <p className="reservation-info__paragraph">
+                      Phone: <span>{userInfo.phone}</span>
+                    </p>
+                    <p className="reservation-info__paragraph">
+                      Email: <span>{userInfo.email}</span>
                     </p>
                   </div>
                   <button className="reservation-info_cancel" onClick={() => cancelReserva(reserva)}>

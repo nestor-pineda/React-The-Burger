@@ -2,6 +2,7 @@ import "../scss/components/_user-data.scss";
 import { LoginContext } from "../Context/LoginContext/LoginContext";
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import Acordeon from "./Acordeon";
 
 const INITIAL_STATE = {
   name: "",
@@ -164,59 +165,7 @@ const UserData = () => {
         </div>
         <div className="user-data__col">
           <h3 className="reservation-info__title">Reservation information</h3>
-          {userInfo.isAdmin === "true" ? <button onClick={requestAllReservation}>Reservas</button> : <button onClick={requestReservation}>Reservas</button>}
-          {allReservas.map((reserva) => {
-            return (
-              <div className="reservation-info" key={reserva.idReserva}>
-                <div className="reservation-info__texts">
-                  <p className="reservation-info__paragraph">
-                    coduser: <span>{reserva.codUser}</span>
-                  </p>
-                  <p className="reservation-info__paragraph">
-                    People: <span>{reserva.numero}</span>
-                  </p>
-                  <p className="reservation-info__paragraph">
-                    Date: <span>{reserva.date}</span>
-                  </p>
-                  <p className="reservation-info__paragraph">
-                    Time: <span>{reserva.hour}</span>
-                  </p>
-                </div>
-                <button className="reservation-info_cancel" onClick={() => cancelReserva(reserva)}>
-                  Cancel
-                </button>
-              </div>
-            );
-          })}
-          {reservasUser.map((reserva) => {
-            return (
-              <div className="reservation-info" key={reserva.idReserva}>
-                <div className="reservation-info__texts">
-                  <p className="reservation-info__paragraph">
-                    Name: <span>{userInfo.name}</span>
-                  </p>
-                  <p className="reservation-info__paragraph">
-                    People: <span>{reserva.numero}</span>
-                  </p>
-                  <p className="reservation-info__paragraph">
-                    Date: <span>{reserva.date}</span>
-                  </p>
-                  <p className="reservation-info__paragraph">
-                    Time: <span>{reserva.hour}</span>
-                  </p>
-                  <p className="reservation-info__paragraph">
-                    Phone: <span>{userInfo.phone}</span>
-                  </p>
-                  <p className="reservation-info__paragraph">
-                    Email: <span>{userInfo.email}</span>
-                  </p>
-                </div>
-                <button className="reservation-info_cancel" onClick={() => cancelReserva(reserva)}>
-                  Cancel
-                </button>
-              </div>
-            );
-          })}
+          <Acordeon allReservas={allReservas} cancelReserva={cancelReserva} userInfo={userInfo} requestAllReservation={requestAllReservation} requestReservation={requestReservation} reservasUser={reservasUser} />
         </div>
       </div>
       <div className="user-data__right"></div>
