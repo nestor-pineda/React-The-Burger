@@ -13,12 +13,14 @@ $themes: (
     text: $textColorLight,
     footerBg: $bgColorFooterLight,
     dashboarBg: $dashboarGbLight,
+    border: $borderColor,
   ),
   dark: (
     bg: $bgColorDark,
     text: $textColorDark,
     footerBg: $bgColorFooterDark,
     dashboarBg: $dashboarGbDark,
+    border: $borderColorDark,
   ),
 );
 

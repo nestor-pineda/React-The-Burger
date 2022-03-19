@@ -61,7 +61,7 @@ const Navigation = () => {
                       </Link>
                     )}
                   </Nav>
-                  {/* <Switcher /> */}
+                  <Switcher />
                   {userLogged ? (
                     <button className="login-out" onClick={() => handleLogout()}>
                       <BiLogOutCircle />

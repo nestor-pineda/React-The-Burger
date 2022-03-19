@@ -11,16 +11,18 @@
   }
   .user-data__center {
     @include gridInner2;
-
+    min-height: calc(100vh - 310px);
     .user-data__col {
       @include boxPadding;
-      @include boxClip(#ccc);
+      @include boxClip(transparent);
       @include themed() {
         color: t("text");
-        background: t("dashboarBg");
       }
       .reservation-info__title {
         @include title($myH5, $myBold, 0, 10px 0px 0 10px, 0, 20px 0px 0px 20px);
+        @include themed() {
+          color: t("text");
+        }
       }
       .reservation-info {
         display: flex;
@@ -29,16 +31,26 @@
         .reservation-info__texts {
           .reservation-info__paragraph {
             @include paragraph($myP, $myMedium, 0, 0 0 10px 0, 0, 0 0 10px 0px);
+            @include themed() {
+              color: t("text");
+            }
             span {
-              color: $inputUserData;
+              // color: $inputColor;
+              @include themed() {
+                color: t("text");
+              }
             }
           }
         }
         .reservation-info_cancel {
           background-color: transparent;
-          color: $btnTextColor;
+          // color: $btnTextColor;
+          @include themed() {
+            color: t("text");
+            border-color: border;
+          }
           outline: none;
-          border: 1px solid $borderColor;
+          border: 1px solid;
           transition: background-color 0.2s ease 0s, color 0.3s ease 0s;
           height: 23px;
           min-width: 65px;
@@ -61,14 +73,20 @@
             display: flex;
             .change-data__lable {
               @include paragraph($myP, $myMedium, 0, 0, 0, 0);
+              @include themed() {
+                color: t("text");
+              }
             }
             input.change-data__input {
               outline: none;
               border: 0px;
               @include paragraph($myP, $myMedium, 0, 0 0 0 3px, 0, 0 0 0 3px);
-              color: $inputUserData;
+              // color: $inputColor;
               background-color: transparent;
               width: 100%;
+              @include themed() {
+                color: t("text");
+              }
             }
           }
           .change-data__right {
@@ -80,12 +98,13 @@
               @include themed() {
                 color: t("text");
                 background: t("bg");
+                border-color: t("border");
               }
               margin-left: 10px;
               background-color: transparent;
               color: $btnTextColor;
               outline: none;
-              border: 1px solid $borderColor;
+              border: 1px solid;
               transition: background-color 0.2s ease 0s, color 0.3s ease 0s;
 
               &:hover {
