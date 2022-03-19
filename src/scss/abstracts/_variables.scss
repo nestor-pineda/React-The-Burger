@@ -4,24 +4,27 @@
 $myColor1: #1e1e1e; // Black
 $myColor2: #ffffff; // White
 $myColor3: #dde3d5; // Light Green
-$myColor4: #8e9783; // Dark Green
+$myColor4: #6b7264; // Dark Green
 $myColor5: #e3d9d5; // Light Brown
 $myColor6: #bcafaa; // Brown
-$myColor7: #8d7c76; // Dark Brown
+$myColor7: #6b5e5a; // Dark Brown
 $myColor8: #d0e5ec; // Light Blue
-$myColor9: #7d8f95; // Dark Blue
+$myColor9: #4a5f66; // Dark Blue
 $myColor10: #494949; // Grey
 $myColor11: #e0d5e3; // Light Purple
-$myColor12: #8c808f; // Dark Purple
+$myColor12: #615264; // Dark Purple
 $myColor13: #9c9c9c; // Light Grey
 $myColor14: #333333; // Dark Grey
 
 $titleColor: $myColor1; //Black
 $footerBg: $myColor6; //Brown
+$footerBgDark: $myColor7; // Dark Brown
 $borderColor: $myColor1; // Black
 $borderColorDark: $myColor2; // White
 $titleBg: $myColor3; // Light Green
+$titleBgDark: $myColor4; // Dark Green
 $titleBg2: $myColor8; // Light Blue
+$titleBg2Dark: $myColor9; // Dark Blue
 $bodyBg: $myColor2; // White
 $reservationBg: $myColor5; // Light Brown
 $inputColor: $myColor1; //Black
@@ -29,6 +32,7 @@ $sliderColor: $myColor2; // White
 $menuCardPrice1: $myColor3; // Light Green
 $menuCardPrice2: $myColor5; // Light Brown
 $menuCardPrice3: $myColor11; // Light Purple
+$menuCardPrice3Dark: $myColor12; // Dark Purple
 $menuCardPrice4: $myColor8; // Light Blue
 $priceSingleProduct: $myColor4; // Dark Green
 $hoverLinkFooter: $myColor7; // Dark Brown

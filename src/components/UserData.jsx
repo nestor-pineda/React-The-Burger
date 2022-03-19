@@ -2,6 +2,7 @@ import "../scss/components/_user-data.scss";
 import { LoginContext } from "../Context/LoginContext/LoginContext";
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { BsArrowDownShort } from "react-icons/bs";
 
 const INITIAL_STATE = {
   name: "",
@@ -103,7 +104,8 @@ const UserData = () => {
       <div className="user-data__left"></div>
       <div className="user-data__center">
         <div className="user-data__col">
-          <h3 className="reservation-info__title">User information</h3>
+          {userInfo.isAdmin === "true" ? <h3 className="reservation-info__title">Admin information</h3> : <h3 className="reservation-info__title">User information</h3>}
+
           <div className="change-data">
             <form className="change-data__form" onSubmit={updateInfo_name}>
               <div className="change-data__left">
@@ -163,8 +165,20 @@ const UserData = () => {
           </div>
         </div>
         <div className="user-data__col">
-          <h3 className="reservation-info__title">Reservation information</h3>
-          {userInfo.isAdmin === "true" ? <button onClick={requestAllReservation}>Reservas</button> : <button onClick={requestReservation}>Reservas</button>}
+          {/* <h3 className="reservation-info__title">Reservation information</h3> */}
+          {userInfo.isAdmin === "true" ? (
+            <button className="reservation-btn" onClick={requestAllReservation}>
+              <h3 className="reservation-info__title">
+                Reservation information <BsArrowDownShort />
+              </h3>
+            </button>
+          ) : (
+            <button className="reservation-btn" onClick={requestReservation}>
+              <h3 className="reservation-info__title">
+                Reservation information <BsArrowDownShort />
+              </h3>
+            </button>
+          )}
           {allReservas.map((reserva) => {
             return (
               <div className="reservation-info" key={reserva.idReserva}>
@@ -220,7 +234,6 @@ const UserData = () => {
         </div>
       </div>
       <div className="user-data__right"></div>
-      {userInfo.isAdmin === "true" ? <h1>Bienvenido Administrador</h1> : null}
     </div>
   );
 };

@@ -21,9 +21,13 @@
 .form select,
 .form input.date {
   background-color: transparent;
-  border: solid 1px $borderColor;
+  border: solid 1px;
   font-size: 15px;
-  color: $inputColor;
+  // color: $inputColor;
+  @include themed() {
+    color: t("text");
+    border-color: border;
+  }
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   border-radius: 0px;
@@ -41,7 +45,9 @@
 .form textarea.standard:focus,
 .form select:focus,
 .form input.date:focus {
-  border-color: rgba(30, 30, 30, 0.3);
+  @include themed() {
+    border-color: border;
+  }
   outline: none;
 }
 
@@ -49,9 +55,13 @@
 .form .submit {
   margin: 0;
   background-color: rgba(30, 30, 30, 0.2);
-  border: solid 1px $borderColor;
+  border: solid 1px;
+  @include themed() {
+    color: t("text");
+    border-color: border;
+  }
   font-size: 16px;
-  color: $inputColor;
+  // color: $inputColor;
   font-weight: normal;
   text-align: center;
   padding-top: 10px;
@@ -67,6 +77,8 @@
 /* the submit button hover */
 .form .submit:hover {
   background-color: rgba(30, 30, 30, 0.35);
-  border-color: $borderColor;
-  color: $inputColor;
+  @include themed() {
+    color: t("text");
+    border-color: border;
+  }
 }

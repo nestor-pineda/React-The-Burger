@@ -1,4 +1,5 @@
 @import "../styles.scss";
+@import "../theme/theme";
 
 footer {
   .footer {
@@ -12,7 +13,10 @@ footer {
     .footer__center {
       @include gridInner3;
       .footer__col {
-        @include boxClip($footerBg);
+        @include boxClip(transparent);
+        @include themed() {
+          background-color: t("brownBG");
+        }
         .logo {
           width: 100%;
           max-width: 140px;
@@ -22,7 +26,10 @@ footer {
           @include title($myH3, $myBold, 0, 10px 0px 10px 10px, 0, 20px 0px 10px 20px);
         }
         .footer__input-icon-wrap {
-          border-bottom: 1px solid $borderColor;
+          border-bottom: 1px solid;
+          @include themed() {
+            border-color: t("border");
+          }
           display: flex;
           width: 100%;
           max-width: 250px;
@@ -33,6 +40,9 @@ footer {
             outline: none;
             padding-right: 0px;
             padding-bottom: 0px;
+            @include themed() {
+              color: t("text");
+            }
           }
           .footer__input-with-icon {
             border: none;
@@ -41,6 +51,9 @@ footer {
             width: 100%;
             max-width: 240px;
             padding-bottom: 5px;
+            @include themed() {
+              color: t("text");
+            }
           }
         }
         .footer__nav {
@@ -58,7 +71,7 @@ footer {
               @include paragraph($myP, $myMedium, 0, 0px 0px 0px 10px, 0, 0px 0px 0px 20px);
               transition: color 0.5s ease 0s;
               &:hover {
-                color: $hoverLinkFooter;
+                opacity: 0.6;
               }
             }
           }

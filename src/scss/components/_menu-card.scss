@@ -1,4 +1,5 @@
 @import "../styles.scss";
+@import "../theme/theme";
 
 .card-link {
   text-decoration: none;
@@ -7,9 +8,15 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid $borderColor;
+    border: 1px solid;
+    @include themed() {
+      border-color: t("border");
+    }
     .menu-card__title {
-      border-bottom: 1px solid $borderColor;
+      border-bottom: 1px solid;
+      @include themed() {
+        border-color: t("border");
+      }
       text-align: center;
       @include boxPadding;
       h5 {
@@ -27,7 +34,10 @@
       transform: scale(1.02);
     }
     .menu-card__price {
-      border-top: 1px solid $borderColor;
+      border-top: 1px solid;
+      @include themed() {
+        border-color: t("border");
+      }
       text-align: center;
       @include boxPadding;
       h5 {
@@ -35,16 +45,28 @@
       }
     }
     .menu-card__price--green {
-      @include boxClip($menuCardPrice1);
+      @include boxClip(transparent);
+      @include themed() {
+        background-color: t("greenBG");
+      }
     }
     .menu-card__price--purple {
-      @include boxClip($menuCardPrice3);
+      @include boxClip(transparent);
+      @include themed() {
+        background-color: t("purpleBG");
+      }
     }
     .menu-card__price--brown {
-      @include boxClip($menuCardPrice2);
+      @include boxClip(transparent);
+      @include themed() {
+        background-color: t("brownBG");
+      }
     }
     .menu-card__price--blue {
-      @include boxClip($menuCardPrice4);
+      @include boxClip(transparent);
+      @include themed() {
+        background-color: t("blueBG");
+      }
     }
   }
 }

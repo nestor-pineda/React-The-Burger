@@ -11,7 +11,10 @@
   .reservation__center {
     @include gridInner2;
     .reservation__col {
-      @include boxClip($reservationBg);
+      @include boxClip(transparent);
+      @include themed() {
+        background-color: t("brownBG");
+      }
       .reserv-title {
         @include title($myH3, $myBold, 0, 10px 0px 0 10px, 0, 20px 0px 10px 20px);
       }

@@ -14,6 +14,10 @@ $themes: (
     footerBg: $bgColorFooterLight,
     dashboarBg: $dashboarGbLight,
     border: $borderColor,
+    brownBG: $footerBg,
+    greenBG: $titleBg,
+    blueBG: $titleBg2,
+    purpleBG: $menuCardPrice3,
   ),
   dark: (
     bg: $bgColorDark,
@@ -21,6 +25,10 @@ $themes: (
     footerBg: $bgColorFooterDark,
     dashboarBg: $dashboarGbDark,
     border: $borderColorDark,
+    brownBG: $footerBgDark,
+    greenBG: $titleBgDark,
+    blueBG: $titleBg2Dark,
+    purpleBG: $menuCardPrice3Dark,
   ),
 );
 
