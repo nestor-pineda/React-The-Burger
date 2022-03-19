@@ -19,6 +19,7 @@ const UserData = () => {
   const [error, setError] = useState(false)
   const [updateSuccess, setUpdateSuccess] = useState(false)
   const [reservasUser, setReservasUser] = useState([])
+  const [allReservas, setAllReservas] = useState([])
 
 
   ///FUNCION PRINCIPAL QUE SALTA EN EL USEEFFECT
@@ -73,6 +74,20 @@ const UserData = () => {
     })
   }
 
+  const requestAllReservation = () => {
+    fetch(`https://the-burger-server.herokuapp.com/api/reservas`).then((res) => res.json()).then((resInJson) => {
+      setAllReservas(resInJson)
+    })
+  }
+
+
+  const cancelReserva = (reserva) => {
+    fetch(`https://the-burger-server.herokuapp.com/api/reservas/${reserva.idReserva}/delete`, {
+      method: "DELETE"
+    })
+    .then(() => {window.location.reload(false)})
+  }
+
   const handleChange = (ev) => { 
     const {name, value} = ev.target;
     setFormData({...formData, [name]: value})
@@ -88,9 +103,30 @@ const UserData = () => {
     <div className="user-data">
       <div className="user-data__left"></div>
       <div className="user-data__center">
-        <button onClick={requestReservation}>Reservas</button>
+        {userInfo.isAdmin === "true" ? <button onClick={requestAllReservation}>Reservas</button> : <button onClick={requestReservation}>Reservas</button>}
         <div className="user-data__col">
           <h3 className="reservation-info__title">Reservation information</h3>
+          {allReservas.map((reserva) => {
+            return (
+              <div className="reservation-info" key={reserva.idReserva}>
+              <div className="reservation-info__texts">
+                <p className="reservation-info__paragraph">
+                  coduser: <span>{reserva.codUser}</span>
+                </p>
+                <p className="reservation-info__paragraph">
+                  People: <span>{reserva.numero}</span>
+                </p>
+                <p className="reservation-info__paragraph">
+                  Date: <span>{reserva.date}</span>
+                </p>
+                <p className="reservation-info__paragraph">
+                  Time: <span>{reserva.hour}</span>
+                </p>
+              </div>
+              <button className="reservation-info_cancel" onClick={() => cancelReserva(reserva)}>Cancel</button>
+            </div>
+            )
+          })}
           {reservasUser.map((reserva) => {
             return (
               <div className="reservation-info" key={reserva.idReserva}>
@@ -114,7 +150,7 @@ const UserData = () => {
                   Email: <span>{userInfo.email}</span>
                 </p>
               </div>
-              <button className="reservation-info_cancel">Cancel</button>
+              <button className="reservation-info_cancel" onClick={() => cancelReserva(reserva)}>Cancel</button>
             </div>
             )
           })}
