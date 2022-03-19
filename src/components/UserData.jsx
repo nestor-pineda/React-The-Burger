@@ -18,6 +18,7 @@ const UserData = () => {
   const [formData, setFormData] = useState(INITIAL_STATE);
   const [error, setError] = useState(false)
   const [updateSuccess, setUpdateSuccess] = useState(false)
+  const [reservasUser, setReservasUser] = useState([])
 
 
   ///FUNCION PRINCIPAL QUE SALTA EN EL USEEFFECT
@@ -63,6 +64,15 @@ const UserData = () => {
     })
   }
 
+
+  ///FUNCION PARA SACAR LAS RESERVAS
+
+  const requestReservation = () => {
+    fetch(`https://the-burger-server.herokuapp.com/api/reservas/user/${userInfo.idUsers}`).then((res) => res.json()).then((resInJson) => {
+      setReservasUser(resInJson)
+    })
+  }
+
   const handleChange = (ev) => { 
     const {name, value} = ev.target;
     setFormData({...formData, [name]: value})
@@ -78,31 +88,36 @@ const UserData = () => {
     <div className="user-data">
       <div className="user-data__left"></div>
       <div className="user-data__center">
+        <button onClick={requestReservation}>Reservas</button>
         <div className="user-data__col">
           <h3 className="reservation-info__title">Reservation information</h3>
-          <div className="reservation-info">
-            <div className="reservation-info__texts">
-              <p className="reservation-info__paragraph">
-                Name: <span>Néstor</span>
-              </p>
-              <p className="reservation-info__paragraph">
-                People: <span>2</span>
-              </p>
-              <p className="reservation-info__paragraph">
-                Date: <span>24/03/2022</span>
-              </p>
-              <p className="reservation-info__paragraph">
-                Time: <span>14:00</span>
-              </p>
-              <p className="reservation-info__paragraph">
-                Phone: <span>667898345</span>
-              </p>
-              <p className="reservation-info__paragraph">
-                Email: <span>nestor@gmail.com</span>
-              </p>
+          {reservasUser.map((reserva) => {
+            return (
+              <div className="reservation-info" key={reserva.idReserva}>
+              <div className="reservation-info__texts">
+                <p className="reservation-info__paragraph">
+                  Name: <span>{userInfo.name}</span>
+                </p>
+                <p className="reservation-info__paragraph">
+                  People: <span>{reserva.numero}</span>
+                </p>
+                <p className="reservation-info__paragraph">
+                  Date: <span>{reserva.date}</span>
+                </p>
+                <p className="reservation-info__paragraph">
+                  Time: <span>{reserva.hour}</span>
+                </p>
+                <p className="reservation-info__paragraph">
+                  Phone: <span>{userInfo.phone}</span>
+                </p>
+                <p className="reservation-info__paragraph">
+                  Email: <span>{userInfo.email}</span>
+                </p>
+              </div>
+              <button className="reservation-info_cancel">Cancel</button>
             </div>
-            <button className="reservation-info_cancel">Cancel</button>
-          </div>
+            )
+          })}
         </div>
         <div className="user-data__col">
           <h3 className="reservation-info__title">User information</h3>
