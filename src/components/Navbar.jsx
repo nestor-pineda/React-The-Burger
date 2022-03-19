@@ -53,7 +53,7 @@ const Navigation = () => {
 
                     {userLogged ? (
                       <Link to="/dashboard" className="nav-item">
-                        Dashboar
+                        Dashboard
                       </Link>
                     ) : (
                       <Link to="/register" className="nav-item">
