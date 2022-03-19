@@ -20,15 +20,6 @@ const Dashboard = (props) => {
   return (
     <>
       <UserData />
-      <div style={{ padding: 10 }}>
-        <div className="dashboardPage">
-          <h1>Dashboard</h1>
-          <button className="logoutBtn" onClick={handleLogout}>
-            Logout
-          </button>
-        </div>
-        <p>Welcome</p>
-      </div>
     </>
   );
 };
