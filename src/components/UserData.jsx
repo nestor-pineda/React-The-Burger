@@ -17,7 +17,10 @@ const UserData = () => {
   const [userInfo, setUserInfo] = useState({})
   const [formData, setFormData] = useState(INITIAL_STATE);
   const [error, setError] = useState(false)
+  const [updateSuccess, setUpdateSuccess] = useState(false)
 
+
+  ///FUNCION PRINCIPAL QUE SALTA EN EL USEEFFECT
 
   const requestUserInfo = () => {
     fetch(`https://the-burger-server.herokuapp.com/api/users/email/${userLogged}`).then((res) => res.json()).then((resInJSON) => {
@@ -25,24 +28,39 @@ const UserData = () => {
     })
   }
   
+
+  ///FUNCIONES PARA ACTUALIZAR INFO
   
-  const updateInfo_name = () => {
-      axios.put(`https://the-burger-server.herokuapp.com/api/user/${userInfo.idUsers}/update`, {
-        name: formData.name
-      })
+  const updateInfo_name = (ev) => {
+    ev.preventDefault()
+    axios.put(`https://the-burger-server.herokuapp.com/api/user/${userInfo.idUsers}/update`, {
+      name: formData.name
+    })
+    setUpdateSuccess(true)
   }
 
   const updateInfo_surname = (ev) => {
-      axios.put(`https://the-burger-server.herokuapp.com/api/user/${userInfo.idUsers}/update`, {
-        surname: formData.surname
-      })
+    ev.preventDefault()
+    axios.put(`https://the-burger-server.herokuapp.com/api/user/${userInfo.idUsers}/update`, {
+      surname: formData.surname
+    })
+    setUpdateSuccess(true)
   }
 
 
-  const updateInfo_phone = () => {
-      axios.put(`https://the-burger-server.herokuapp.com/api/user/${userInfo.idUsers}/update`, {
-        phone: formData.phone
-      })
+  const updateInfo_phone = (ev) => {
+    ev.preventDefault()
+    fetch("https://the-burger-server.herokuapp.com/api/users").then((res) => res.json()).then((resInJson) => {
+      const users = resInJson
+      const phoneExist = users.find((user) => formData.phone === user.phone)
+      if (phoneExist) {
+        setError(true)
+      } else {
+        axios.put(`https://the-burger-server.herokuapp.com/api/user/${userInfo.idUsers}/update`, {
+          phone: formData.phone
+        })
+      }
+    })
   }
 
   const handleChange = (ev) => { 
@@ -133,6 +151,7 @@ const UserData = () => {
             <div>
               {error ? <p>A user with this phone already exist</p> : null}
             </div>
+            {updateSuccess ? <p>User updated correctly</p> : null}
           </div>
         </div>
       </div>
