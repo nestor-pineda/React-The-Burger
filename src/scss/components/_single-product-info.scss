@@ -13,7 +13,7 @@
 
     .single-product__col {
       @include boxPadding;
-      @include boxClip($bodyBg);
+      @include boxClip(transparent);
       .single-product__img {
         width: 100%;
         height: 300px;

@@ -1,7 +1,11 @@
+@import "../theme/theme";
 // All Titles Mixine
 @mixin title($size, $weight, $margin, $padding, $margin600, $padding600) {
   font-family: $titleFont; // Noto Serif
-  color: $titleColor; // Black
+  // color: $titleColor; // Black
+  @include themed() {
+    color: t("text");
+  }
   font-size: $size;
   font-weight: $weight;
   margin: $margin;
@@ -15,7 +19,10 @@
 // All Titles Mixine
 @mixin paragraph($size, $weight, $margin, $padding, $margin600, $padding600) {
   font-family: $paragraphFont; // Noto Serif
-  color: $titleColor; // Black
+  // color: $titleColor; // Black
+  @include themed() {
+    color: t("text");
+  }
   font-size: $size;
   font-weight: $weight;
   margin: $margin;
@@ -31,7 +38,10 @@
   display: grid;
   grid-template-columns: 0.5em 1fr 0.5em;
   grid-template-rows: auto;
-  border-color: $borderColor;
+  // border-color: $borderColor;
+  @include themed() {
+    border-color: border;
+  }
   border-top: $border-top;
   border-bottom: $border-bottom;
   @media (min-width: 600px) {
@@ -40,13 +50,19 @@
 }
 // for the left qhite side
 @mixin leftSide($height) {
-  border-right: 1px solid $borderColor;
+  border-right: 1px solid;
+  @include themed() {
+    border-color: border;
+  }
   height: $height;
 }
 
 // for the right qhite side
 @mixin rightSide($height) {
-  border-left: 1px solid $borderColor;
+  border-left: 1px solid;
+  @include themed() {
+    border-color: border;
+  }
   height: $height;
 }
 
@@ -125,7 +141,10 @@
 @mixin border1 {
   padding: 0.5em 0.5em 0 0.5em;
   @media (min-width: 600px) {
-    border-right: 1px solid $borderColor;
+    border-right: 1px solid;
+    @include themed() {
+      border-color: border;
+    }
     padding: 1em 0 1em 1em;
   }
 }
@@ -133,7 +152,10 @@
 @mixin border2 {
   padding: 0 0.5em 0 0.5em;
   @media (min-width: 600px) {
-    border-right: 1px solid $borderColor;
+    border-right: 1px solid;
+    @include themed() {
+      border-color: border;
+    }
     padding: 1em 0 1em 0em;
   }
 }
@@ -150,7 +172,10 @@
 @mixin borderLeft {
   padding: 0.5em 0.5em 0 0.5em;
   @media (min-width: 600px) {
-    border-right: 1px solid $borderColor;
+    border-right: 1px solid;
+    @include themed() {
+      border-color: border;
+    }
     padding: 1em;
   }
 }

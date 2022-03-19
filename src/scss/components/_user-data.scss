@@ -3,6 +3,7 @@
 
 .user-data {
   @include grid3(none, none);
+
   .user-data__left {
     @include leftSide(100%);
   }
@@ -18,11 +19,14 @@
       @include themed() {
         color: t("text");
       }
+      .reservation-btn {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0px;
+      }
       .reservation-info__title {
-        @include title($myH5, $myBold, 0, 10px 0px 0 10px, 0, 20px 0px 0px 20px);
-        @include themed() {
-          color: t("text");
-        }
+        @include title($myH5, $myBold, 0, 10px 0px 0 10px, 0, 16px 0px 0px 16px);
       }
       .reservation-info {
         display: flex;
@@ -47,7 +51,7 @@
           // color: $btnTextColor;
           @include themed() {
             color: t("text");
-            border-color: border;
+            border-color: t("border");
           }
           outline: none;
           border: 1px solid;

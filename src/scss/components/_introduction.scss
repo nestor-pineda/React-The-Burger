@@ -11,7 +11,7 @@
   .introduction__center {
     @include gridInner2;
     .introduction__col {
-      @include boxClip($bodyBg);
+      @include boxClip(transparent);
       .intro-title {
         @include title($myH3, 700, 0, 0 0 0.5em 0, 0, 0);
       }

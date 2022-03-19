@@ -1,7 +1,11 @@
 @import "../styles.scss";
+@import "../theme/theme";
 
 .navigation {
-  @include grid3(1px solid $borderColor, 1px solid $borderColor);
+  @include grid3(1px solid, 1px solid);
+  @include themed() {
+    border-color: t("border");
+  }
   .navigation__left {
     @include leftSide(100%);
   }
@@ -32,6 +36,9 @@
 .nav-offcanvas-logo {
   width: 100%;
   max-width: 110px;
+}
+
+.offcanvas-body {
 }
 
 .navbar-toggler {
@@ -82,7 +89,7 @@ a.nav-item:hover::before {
 }
 
 button.login-out {
-  background-color: $bodyBg;
+  background-color: transparent;
   border: none;
   outline: none;
   position: absolute;
@@ -95,7 +102,9 @@ button.login-out {
     height: 50px;
     opacity: 1;
     transition: opacity 0.3s ease 0s;
-    color: $logIcon;
+    @include themed() {
+      color: t("text");
+    }
     &:hover {
       opacity: 0.5;
     }

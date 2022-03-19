@@ -11,7 +11,7 @@
   .gallery__center {
     @include gridInner3;
     .gallery__col {
-      @include boxClip($bodyBg);
+      @include boxClip(transparent);
       .galleri-img {
         @include imagesCover(100%, none, none, none, none);
       }

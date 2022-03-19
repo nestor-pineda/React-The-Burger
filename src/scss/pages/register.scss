@@ -1,6 +1,5 @@
 @import "../styles.scss";
-
-@import "../styles.scss";
+@import "../theme/theme";
 
 .register-section {
   @include grid3(none, none);
@@ -19,9 +18,15 @@
     .form-container {
       width: 100%;
       max-width: 300px;
-      border: 1px solid $borderColor;
+      border: 1px solid;
+      @include themed() {
+        border-color: t("border");
+      }
       text-align: center;
-      @include boxClip($loginBg);
+      @include boxClip(transparent);
+      @include themed() {
+        background-color: t("greenBG");
+      }
       @include boxPadding;
       .form-container__title {
         box-sizing: content-box;
@@ -34,8 +39,10 @@
       }
       button {
         width: calc(100% - 40px);
-
-        border: 1px solid $borderColor;
+        border: 1px solid;
+        @include themed() {
+          border-color: t("border");
+        }
         outline: none;
         padding: 5px;
         margin: 5px 20px 20px 20px;
@@ -66,7 +73,10 @@
             margin: 0px 20px;
             border-radius: 0px;
             outline: none;
-            border: 1px solid $borderColor;
+            border: 1px solid;
+            @include themed() {
+              border-color: t("border");
+            }
             padding: 5px;
           }
         }

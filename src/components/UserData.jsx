@@ -2,7 +2,7 @@ import "../scss/components/_user-data.scss";
 import { LoginContext } from "../Context/LoginContext/LoginContext";
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
-import Acordeon from "./Acordeon";
+import { BsArrowDownShort } from "react-icons/bs";
 
 const INITIAL_STATE = {
   name: "",
@@ -104,7 +104,8 @@ const UserData = () => {
       <div className="user-data__left"></div>
       <div className="user-data__center">
         <div className="user-data__col">
-          <h3 className="reservation-info__title">User information</h3>
+          {userInfo.isAdmin === "true" ? <h3 className="reservation-info__title">Admin information</h3> : <h3 className="reservation-info__title">User information</h3>}
+
           <div className="change-data">
             <form className="change-data__form" onSubmit={updateInfo_name}>
               <div className="change-data__left">
@@ -164,12 +165,75 @@ const UserData = () => {
           </div>
         </div>
         <div className="user-data__col">
-          <h3 className="reservation-info__title">Reservation information</h3>
-          <Acordeon allReservas={allReservas} cancelReserva={cancelReserva} userInfo={userInfo} requestAllReservation={requestAllReservation} requestReservation={requestReservation} reservasUser={reservasUser} />
+          {/* <h3 className="reservation-info__title">Reservation information</h3> */}
+          {userInfo.isAdmin === "true" ? (
+            <button className="reservation-btn" onClick={requestAllReservation}>
+              <h3 className="reservation-info__title">
+                Reservation information <BsArrowDownShort />
+              </h3>
+            </button>
+          ) : (
+            <button className="reservation-btn" onClick={requestReservation}>
+              <h3 className="reservation-info__title">
+                Reservation information <BsArrowDownShort />
+              </h3>
+            </button>
+          )}
+          {allReservas.map((reserva) => {
+            return (
+              <div className="reservation-info" key={reserva.idReserva}>
+                <div className="reservation-info__texts">
+                  <p className="reservation-info__paragraph">
+                    coduser: <span>{reserva.codUser}</span>
+                  </p>
+                  <p className="reservation-info__paragraph">
+                    People: <span>{reserva.numero}</span>
+                  </p>
+                  <p className="reservation-info__paragraph">
+                    Date: <span>{reserva.date}</span>
+                  </p>
+                  <p className="reservation-info__paragraph">
+                    Time: <span>{reserva.hour}</span>
+                  </p>
+                </div>
+                <button className="reservation-info_cancel" onClick={() => cancelReserva(reserva)}>
+                  Cancel
+                </button>
+              </div>
+            );
+          })}
+          {reservasUser.map((reserva) => {
+            return (
+              <div className="reservation-info" key={reserva.idReserva}>
+                <div className="reservation-info__texts">
+                  <p className="reservation-info__paragraph">
+                    Name: <span>{userInfo.name}</span>
+                  </p>
+                  <p className="reservation-info__paragraph">
+                    People: <span>{reserva.numero}</span>
+                  </p>
+                  <p className="reservation-info__paragraph">
+                    Date: <span>{reserva.date}</span>
+                  </p>
+                  <p className="reservation-info__paragraph">
+                    Time: <span>{reserva.hour}</span>
+                  </p>
+                  <p className="reservation-info__paragraph">
+                    Phone: <span>{userInfo.phone}</span>
+                  </p>
+                  <p className="reservation-info__paragraph">
+                    Email: <span>{userInfo.email}</span>
+                  </p>
+                </div>
+                <button className="reservation-info_cancel" onClick={() => cancelReserva(reserva)}>
+                  Cancel
+                </button>
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className="user-data__right"></div>
-      {userInfo.isAdmin === "true" ? <h1>Bienvenido Administrador</h1> : null}
     </div>
   );
 };

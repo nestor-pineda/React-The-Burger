@@ -1,4 +1,5 @@
 @import "../styles.scss";
+@import "../theme/theme";
 
 .title {
   @include grid3(1px solid, 1px solid);
@@ -20,13 +21,19 @@
 }
 
 .greenBg {
-  background-color: $titleBg;
+  // background-color: $titleBg;
+  @include themed() {
+    background-color: t("greenBG");
+  }
   width: 100%;
   height: 100%;
 }
 
 .blueBg {
-  background-color: $titleBg2;
+  // background-color: $titleBg2;
+  @include themed() {
+    background-color: t("blueBG");
+  }
   width: 100%;
   height: 100%;
 }
