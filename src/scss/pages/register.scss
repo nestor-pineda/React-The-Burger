@@ -1,14 +1,16 @@
 @import "../styles.scss";
 
-.login-section {
+@import "../styles.scss";
+
+.register-section {
   @include grid3(none, none);
-  .login-section__left {
+  .register-section__left {
     @include leftSide(100%);
   }
-  .login-section__right {
+  .register-section__right {
     @include rightSide(100%);
   }
-  .login-section__center {
+  .register-section__center {
     width: 100%;
     height: 60vh;
     display: flex;
@@ -32,13 +34,13 @@
       }
       button {
         width: calc(100% - 40px);
-        // background-color: green;
+
         border: 1px solid $borderColor;
         outline: none;
         padding: 5px;
         margin: 5px 20px 20px 20px;
         @include boxClip($white);
-        // @include boxPadding;
+
         transition: all 1s ease 0s;
         &:hover {
           background-color: $titleBg;
@@ -52,10 +54,10 @@
         }
       }
 
-      .login-form {
+      .register-form {
         display: flex;
         flex-direction: column;
-        .login-form__item {
+        .register-form__item {
           display: flex;
           flex-direction: column;
           margin-bottom: 5px;
