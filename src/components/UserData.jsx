@@ -18,6 +18,7 @@ const UserData = () => {
   const [updateSuccess, setUpdateSuccess] = useState(false);
   const [reservasUser, setReservasUser] = useState([]);
   const [allReservas, setAllReservas] = useState([]);
+  const [toggleReservas, setToggleReservas] = useState(false)
 
   ///FUNCION PRINCIPAL QUE SALTA EN EL USEEFFECT
 
@@ -67,6 +68,7 @@ const UserData = () => {
   ///FUNCION PARA SACAR LAS RESERVAS
 
   const requestReservation = () => {
+    setToggleReservas(!toggleReservas);
     fetch(`https://the-burger-server.herokuapp.com/api/reservas/user/${userInfo.idUsers}`)
       .then((res) => res.json())
       .then((resInJson) => {
@@ -75,6 +77,7 @@ const UserData = () => {
   };
 
   const requestAllReservation = () => {
+    setToggleReservas(!toggleReservas);
     fetch(`https://the-burger-server.herokuapp.com/api/reservas`)
       .then((res) => res.json())
       .then((resInJson) => {
@@ -179,6 +182,8 @@ const UserData = () => {
               </h3>
             </button>
           )}
+          {toggleReservas ?
+          <>
           {allReservas.map((reserva) => {
             return (
               <div className="reservation-info" key={reserva.idReserva}>
@@ -202,7 +207,11 @@ const UserData = () => {
               </div>
             );
           })}
-          {reservasUser.map((reserva) => {
+          </>
+          : null}
+          {toggleReservas ?
+          <>
+           {reservasUser.map((reserva) => {
             return (
               <div className="reservation-info" key={reserva.idReserva}>
                 <div className="reservation-info__texts">
@@ -231,6 +240,8 @@ const UserData = () => {
               </div>
             );
           })}
+          </>         
+          : null}
         </div>
       </div>
       <div className="user-data__right"></div>
