@@ -1,5 +1,5 @@
 import useFetch from "../CustomHooks/useFetch";
-import MenuCard from "../Components/MenuCard";
+import MenuCard from "../components/MenuCard";
 import Spinner from "./Spinner";
 import "../scss/components/_menu-section.scss";
 

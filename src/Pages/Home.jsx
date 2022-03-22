@@ -1,8 +1,8 @@
-import HeroHome from "../Components/HeroHome";
-import Reservation from "../Components/Reservation";
-import Introduction from "../Components/Introduction";
-import Title from "../Components/Title";
-import ImageGallery from "../Components/ImageGallery";
+import HeroHome from "../components/HeroHome";
+import Reservation from "../components/Reservation";
+import Introduction from "../components/Introduction";
+import Title from "../components/Title";
+import ImageGallery from "../components/ImageGallery";
 
 const Home = () => {
   const titleText = "The Gallery"; // Sets the title text

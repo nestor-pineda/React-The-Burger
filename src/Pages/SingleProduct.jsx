@@ -1,9 +1,9 @@
-import SingleProductInfo from "../Components/SingleProductInfo";
+import SingleProductInfo from "../components/SingleProductInfo";
 import useFetch from "../CustomHooks/useFetch";
 import { useParams } from "react-router-dom";
-import Carousel from "../Components/Carousel";
-import Title from "../Components/Title";
-import Spinner from "../Components/Spinner";
+import Carousel from "../components/Carousel";
+import Title from "../components/Title";
+import Spinner from "../components/Spinner";
 
 const SingleProduct = () => {
   const { id } = useParams();

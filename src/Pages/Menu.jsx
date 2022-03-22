@@ -1,9 +1,9 @@
-import HeroOtherPages from "../Components/HeroOtherPages";
-import BurgerSection from "../Components/BurgersSection";
-import AperitivosSection from "../Components/AperitivosSection";
-import PostresSection from "../Components/PostresSection";
-import Title from "../Components/Title";
-import BebidasSection from "../Components/BebidasSection";
+import HeroOtherPages from "../components/HeroOtherPages";
+import BurgerSection from "../components/BurgersSection";
+import AperitivosSection from "../components/AperitivosSection";
+import PostresSection from "../components/PostresSection";
+import Title from "../components/Title";
+import BebidasSection from "../components/BebidasSection";
 import "../scss/pages/menu.scss";
 
 const Menu = () => {
