@@ -1,11 +1,13 @@
-@import "../styles.scss";
+@import "~bootstrap/scss/bootstrap";
 @import "../theme/theme";
+@import "../styles.scss";
 
 .navigation {
   @include grid3(1px solid, 1px solid);
   @include themed() {
     border-color: t("border");
   }
+
   .navigation__left {
     @include leftSide(100%);
   }
@@ -31,6 +33,9 @@
 .nav-logo {
   width: 100%;
   max-width: 140px;
+  @include themed() {
+    filter: t("logo");
+  }
 }
 
 .nav-offcanvas-logo {
@@ -97,6 +102,12 @@ button.login-out {
   left: calc(50% - 25px);
   width: 50px;
   height: 50px;
+  a.login-link {
+    color: red;
+    @include themed() {
+      color: t("text");
+    }
+  }
   svg {
     width: 50px;
     height: 50px;
@@ -108,5 +119,17 @@ button.login-out {
     &:hover {
       opacity: 0.5;
     }
+  }
+}
+
+.offcanvas-header {
+  @include themed() {
+    background: t("brownBG");
+  }
+}
+
+#offcanvasNavbar {
+  @include themed() {
+    background: t("brownBG");
   }
 }

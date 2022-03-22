@@ -78,7 +78,7 @@ const requestUserInfo = () => {
       ) : (
         <button className="submit" disabled>Must Log in</button>
       )}
-      {reservationDone ? <p>Reservatrion registered correctly</p> : null}
+      {reservationDone ? <p className="reservation-ok">Reservatrion registered correctly</p> : null}
     </form>
   );
 };

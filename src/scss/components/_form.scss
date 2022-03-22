@@ -82,3 +82,20 @@
     border-color: border;
   }
 }
+
+input::placeholder {
+  @include themed() {
+    color: t("text");
+  }
+}
+
+::-webkit-calendar-picker-indicator {
+  @include themed() {
+    filter: t("icon");
+  }
+}
+
+.reservation-ok {
+  text-align: center;
+  margin-top: 10px;
+}

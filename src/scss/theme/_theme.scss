@@ -18,6 +18,8 @@ $themes: (
     greenBG: $titleBg,
     blueBG: $titleBg2,
     purpleBG: $menuCardPrice3,
+    logo: brightness(0),
+    icon: invert(0),
   ),
   dark: (
     bg: $bgColorDark,
@@ -29,6 +31,8 @@ $themes: (
     greenBG: $titleBgDark,
     blueBG: $titleBg2Dark,
     purpleBG: $menuCardPrice3Dark,
+    logo: brightness(100),
+    icon: invert(1),
   ),
 );
 

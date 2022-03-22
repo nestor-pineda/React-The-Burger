@@ -2,7 +2,7 @@
 @import "../theme/theme";
 
 .menu-double-section {
-  @include grid3(1px solid, none);
+  @include grid3(1px solid, 1px solid);
   @include themed() {
     border-color: t("border");
   }

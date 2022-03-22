@@ -21,6 +21,9 @@ footer {
           width: 100%;
           max-width: 140px;
           padding: 20px 0px 10px 10px;
+          @include themed() {
+            filter: t("logo");
+          }
         }
         h3 {
           @include title($myH3, $myBold, 0, 10px 0px 10px 10px, 0, 20px 0px 10px 20px);
@@ -51,6 +54,11 @@ footer {
             width: 100%;
             max-width: 240px;
             padding-bottom: 5px;
+            @include themed() {
+              color: t("text");
+            }
+          }
+          .footer__input-with-icon::placeholder {
             @include themed() {
               color: t("text");
             }
