@@ -1,3 +1,22 @@
+# The Burger 
+
+![Placeholder Image](mockup.gif)
+
+We've created this Web App as our final Bootcamp project. Nicolas and I decided to take a step further and developed a front-end and a back-end to deal with the demands of what a real restaurant could need. 
+
+We have been working using the Agile methodology. Each of us had a different task, but we all contributed and helped one another. 
+
+For this project we've used:
+
+ - React JS
+ - SASS
+ - Node JS
+ - MySQL
+ - Heroku
+ - Vercel
+
+--- 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
