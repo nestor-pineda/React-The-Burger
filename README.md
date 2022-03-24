@@ -6,6 +6,8 @@ We've created this Web App as our final Bootcamp project. Nicolas and I decided 
 
 We have been working using the Agile methodology. Each of us had a different task, but we all contributed and helped one another. 
 
+We have created a database that accepts the registration of users. Each user can make a reservation after being logged in. Then the user can access the dashboard to cancel the reservation and edit their profile information. 
+
 For this project we've used:
 
  - React JS
